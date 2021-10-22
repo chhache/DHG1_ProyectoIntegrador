@@ -2,4 +2,5 @@
 DH Grupo 1 
 
 Integrantes:
-Christian Hache 
+Christian Hache
+Santiago Pasquini
