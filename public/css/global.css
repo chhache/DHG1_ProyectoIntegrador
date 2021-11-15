@@ -1,0 +1,57 @@
+/*--------------------------------------
+GLOBAL
+----------------------------------------*/
+
+/*Inputs*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*Listas*/
+
+ul {
+    list-style: none;
+    padding-left:0
+}
+
+/*Botones*/
+
+.btn {
+    border:0;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 0.8rem 0.75rem;
+    margin: 0.25rem 0.125rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;   
+}
+.primary-btn {
+    background-color:#12af9a;
+    color:white;
+}
+.secondary-btn {
+    background-color:#dbdbdb;
+    color:#4a4a4a;
+}
+
+/*Breadcrumbs*/
+
+.breadcrumbs {
+    margin:20px 0px;
+    color:#757575;
+    font-size:14px
+}

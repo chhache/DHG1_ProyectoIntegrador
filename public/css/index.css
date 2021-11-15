@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;;
@@ -132,7 +133,7 @@ div.offers{
     color: #39b54a;
     /* font-size: 16px;
     font-weight: normal;  */
-    width 70%;
+    width: 70%;
     /* padding: 15px; */
 }
 .discount,
@@ -156,7 +157,7 @@ article:hover .description{
     visibility: visible;
 }
 /* --- SECTION BANNER --- */
-section.banner img{
+.banner-psc img{
     width: 100%;
 }
 /* --- MAIN --- */
@@ -224,10 +225,11 @@ main section article p{
     /* border: dotted 3px black; */
     /* text-align: center; */
 }
-footer article{
+footer article:first-of-type{
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
+    padding:40px 0 40px 0;
     text-align: left;
     /* border: solid 2px blue; */
     background-color: #FAEDCD;

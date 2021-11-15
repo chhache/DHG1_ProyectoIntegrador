@@ -1,0 +1,137 @@
+
+/*PRODUCT DETAIL PAGE */
+
+section.productDetails {
+    margin-top:20px;
+    margin-bottom:60px
+}
+
+.productDetails span,
+.productDetails p{
+font-size: 14px;
+}
+
+.detail-container {
+    display: flex;
+    background: white;
+    padding: 10px;
+    margin:20px 0;
+    border-radius: 4px;
+}
+
+.detail-container .left-col {
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+    border-radius: 3px;
+}
+.detail-container .right-col {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+    border-radius: 3px;
+}
+.detail-container .right-col > div {
+    margin-top:7px;
+    margin-bottom:7px;
+}
+.detail-container .right-col .actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.detail-container .reputation i {
+    color: orange;
+  }
+
+h2.product-name{
+    font-weight: 500;
+    margin-bottom:10px;
+}
+h3.product-price{
+    font-weight: 400;
+    font-size: 42px;
+    margin-bottom:10px;
+}
+.reputation span,
+p.stock {
+    color:#757575
+}
+.quantity-btn {
+    display: flex;
+}
+.quantity-btn input {
+    width: 75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 13px;
+    border: 1px solid #d6d6d6;
+    border-radius: 0px;
+    border-style: solid;
+    margin:0px;
+    text-align: center;
+    color:#757575
+}
+.quantity-btn button {
+    width: 40px;
+    border: none;
+    color: white;
+    background: #12af9a;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+.quantity-btn button.minus {
+    border-radius: 3px 0px 0px 3px;
+} 
+.quantity-btn button.plus {
+    border-radius: 0px 3px 3px 0px;
+} 
+
+.product-description p:first-of-type {
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.img-product img {
+width:100%
+}
+
+.carrousel-img {
+    display: flex;
+}
+.carrousel-img > div {
+    display: flex;
+    flex: 1;
+    padding:10px
+}
+.carrousel-img > div > img {
+    width:100%
+}
+.product-info .img-product {
+    margin: 25px 0 25px 0;
+}
+
+/* ---@media querys---*/
+@media (min-width: 361px){
+}
+
+@media (min-width: 768px){
+    .detail-container .left-col {
+        flex: 2;
+        display:flex;
+    }
+    .detail-container .right-col {
+        flex:1;
+    }
+    .product-info .img-product {
+        display: none;
+    }
+}
