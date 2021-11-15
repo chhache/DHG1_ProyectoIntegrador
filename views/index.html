@@ -15,92 +15,143 @@
         <!-- https://www.sportline.com.ar/    -->
         <!-- https://www.stockcenter.com.ar/home -->
         <!-- Encabezado -> Logo + barra de búsqueda -->
-        <div class="top-header">
-            <div class="logo"> 
-                <img src="images/logo-pegasus.svg" alt="Logo de Pegasus SC">
+        <div class="main-header">
+            <div class="container container-flex">
+                <!-- class -> se puede repetir se usasn en CSS / ID -> son unicos, se usan en JS -->
+                <div class="main-header__container"> 
+                    <img class="main-header__img" src="images/dCompras-1-C.png" alt="Logo dCompras">       
+                    <!-- <h1 class="main-header__title">dCompras</h1>  -->
+                    <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>                
+                </div>             
+                <div class="main-header__container">
+                    <span class="main-header__txt">Ayuda</span>
+                    <p class="main-header__txt"> <i class="fas fa-phone"></i>  Tel +54 011-123456</p>                
+                </div>  
+                <div class="main-header__container">
+                    <a href="/register" target="_blank" class="main-header__link__txt"> Inicia Sesión  |  Registrate </a> 
+                    <a href="/register" target="_blank" class="main-header__link"><i class="fas fa-user"></i></a> 
+                    <a href="#" target="_blank" class="main-header__btn">Mis Compras  | <i class="fas fa-shopping-cart"></i></a>
+                    <input type="search" class="main-header__input" placeholder="Buscar producto..."><i class="fas fa-search"></i>
+                </div>
             </div>
-            <div class="form" action="#" method="GET">
-                <span class="input">Buscar productos ...  </span>
-                <span class="submit"><i class="fa fa-search"></i></span>        
-                <!-- <span>  -> Elemento de línea-->
-                <!-- <div> -> Elemento de Bloque -->                
-            </div>
-            <!-- <p>Comprá en cuotas y sin tarjeta de crédito  <i class="fas fa-hand-holding-usd"></i></p> -->
-            <div class="icons">
-                <!-- <a href="/register"><i class="fas fa-user"></i></a> -->
-                <a href="/register"></a><i class="far fa-user"></i></a>
-                <a href="#"></a><i class="fas fa-heart"></i></a>
-                <!-- <a href="#"></a><i class="fas fa-thumbs-up"></i></a> -->
-                <a href="#"></a><i class="fas fa-shopping-cart"></i></a>         
-
-            </div> 
-            <!-- barra denavegacion y lista -->
-            <nav class="navbar">
-                <a href="#">Categorías</a>
-                <a href="#">Hombre</a>
-                <a href="#">Mujer</a>
-                <a href="#">Niños</a>
-                <a href="#">Zapatillas</a>
-                <a href="#">Indumentaria</a>
-                <a href="#">Ofertas</a>          
-            </nav>         
-        </div>   
-    </header> 
+            <nav class="main-nav" id="main-nav">
+                <!-- atajo EMET -> ul.menu>li.menu__item*5>a.menu__link -->
+                <ul class="menu">
+                    <li class="menu__item"><a href="#" class="menu__link">Categorias</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Ofertas</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Marcas</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Ayuda</a></li>
+                    <!-- <li class="menu__item"><a href="" class="menu__link">Contacto</a></li> -->
+                </ul>
+            </nav>
+        </div> 
+    </header>
     <div class="banner-psc">
-        <img src="images/banner.jpg" alt="Banner ofertas">
-    </div>
-
-    <main>
-        <section class="">
-            <h3>Los mas buscados ...</h3>
-            <div class="">
-                <article>
-                    <img src="/images/allStar.jpg" alt="Zapas" class="">
-                </article>
+        <img src="images/pexels-pixabay-163444.jpg" alt="Banner">
+    </div>    
+    <main class="main">
+        <div class="container">
+            <h2 class="main-title">Artículos </h2>
+            <section class="container-products">
+                <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
+            <div class="product">
+                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Nike Air 2015</h3>
+                    <span class="product__price">$16.500</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
             </div>
-        </section>      
-
-    </main>
-    
-    <footer>        
-        <article>
-            <div class="footer-article">
-                <h4>Acerca de</h4>
-                <ul>
-                    <li><a href="#">Quienes somos...</a></li>
-                    <li><a href="#">Políticas de privacidad</a></li>
-                    <li><a href="#">Terminos y condiciones</a></li>                    
-                </ul>             
+            <div class="product">
+                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Nike Air 2011</h3>
+                    <span class="product__price">$18.000</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
             </div>
-            <div class="footer-article">
-                <h4>Redes Sociales</h4>
-                <ul>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                </ul>             
+            <div class="product">
+                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Nike Air 2020</h3>
+                    <span class="product__price">$19.500</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
             </div>
-            <div class="footer-article">
-                <h4>Centro Atención al Cliente</h4>
-                <ul>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>                 
-                </ul>                
+            <div class="product">
+                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Nike Air 2018</h3>
+                    <span class="product__price">$18.670</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
+            </div>            
+        </section>
+       
+        <section class="container__testimonial">
+            <h2 class="section__title">Experiencias</h2>
+            <h3 class="testimonial__tittle">Diego Armando M.</h3>
+            <p class="testimonial__txt">"Yo tengo dos sueños. Mi primer sueño es jugar un mundial y el segundo salir campeón del mundo" </p>
+        </section>
+            <section class="container-tips">
+            <!-- .tip*3>h2.tip__tittle+p.tip__txt+a.tip__btn -->
+            <div class="tip">
+                <i class="far fa-credit-card"></i>
+                <!-- <i class="far fa-hand-paper"></i> -->
+                <h2 class="tip__tittle">Elegí cómo pagar</h2>
+                <p class="tip__txt">Podés pagar con tarjeta, débito o hasta 12 cuotas con dCompras Cash !! </p>
+                <a href="" class="btn-shop">COMPRAR</a>
             </div>
-        </article>               
-        <article>
-            <div> 
-                <img src="images/logo-pegasus.svg" alt="Logo de Pegasus SC">
+            <div class="tip">
+                <i class="fas fa-shipping-fast"></i>
+                <!-- <i class="fas fa-rocket"></i> -->
+                <h2 class="tip__tittle">Envíos Gratis desde $8.900</h2>
+                <p class="tip__txt">Solo por estar registrado en dCompras, tenés envíos gratis en un centenar de productos.</p>
+                <a href="" class="btn-shop">COMPRAR</a>
             </div>
-            <div>
-                <!-- <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p> -->
-                <p>Copyright © 1999-2020 Pegasus Sport Center S.R.L, TODOS LOS DERECHOS RESERVADOS. Las fotos contenidas en este site, el logotipo y 
-                las marcas son propiedad de www.pegasus.com.ar y/o de sus respectivos titulares. Está prohibida la reproducción total o parcial, 
-                sin la expresa autorización de la administradora de la tienda virtual.
-                </p>                
-            </div> 
-        </article>
-
+            <div class="tip">
+                <i class="fas fa-shield-alt"></i>
+                <!-- <i class="fas fa-cog"></i> -->
+                <h2 class="tip__tittle">Seguridad</h2>
+                <p class="tip__txt">Envíos garantizados, sino te gusta ... Devolvelo !!.</p>
+                <a href="" class="btn-shop">COMPRAR</a>
+            </div>
+        </section>
+        </div>
+    </main>    
+    <footer class="main-footer">
+        <!-- Atajo EMET ->.footer__section*>h2.footer__title+p.footer_txt -->
+        <div class="footer__section">
+            <h2 class="footer__title">Interés</h2>
+            <a href="#" class="footer__txt"><p class="footer__txt">Nike</p></a>
+            <a href="#" class="footer__txt"><p class="footer__txt">Adidas</p></a>
+            <a href="#" class="footer__txt"><p class="footer__txt">Puma</p></a>
+            <!-- <p class="footer__txt">Tendencias</p>  -->
+            <a href="#"><i class="footer__txt fab fa-twitter"> | </i></a>
+            <a href="#"><i class="footer__txt fab fa-instagram"> | </i></a>
+            <a href="#"><i class="footer__txt fab fa-facebook"></i></a>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__title">Dirección :</h2>
+            <p class="footer__txt">Segurola y Havana 4310, 7° Piso</p>
+            <h2 class="footer__title">Contacto</h2>
+            <p class="footer__txt">Teléfono: +54 011 123456</p>
+            <p class="footer__txt">Correo: info@dventas.com</p>
+        </div>        
+        <div class="footer__section">
+            <h2 class="footer__title">Ayuda</h2>
+            <a href="" class="footer__link">Comprar</a>
+            <!-- <a href="" class="footer__link">Home</a> -->
+            <a href="" class="footer__link">Acerca de</a>
+            <a href="" class="footer__link">Contactanos</a>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__title">Subscripción:</h2>
+            <p class="footer__txt">Subscribite a nuestro canal ....</p>
+            <input type="email" class="footer__input" placeholder="Ingresá tu em@il ...">
+        </div>
+        </div>        
+        <p class="copy">© 2021 dCompras. All Rigths Reserved | Design by Pegasus</p>
     </footer>
-</body>
+    </body>
 </html>
