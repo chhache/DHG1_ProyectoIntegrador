@@ -10,7 +10,6 @@ section.productDetails {
 .productDetails p{
 font-size: 14px;
 }
-
 .detail-container {
     display: flex;
     background: white;

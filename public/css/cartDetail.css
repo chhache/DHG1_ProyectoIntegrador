@@ -13,7 +13,6 @@ section.productCart {
     display: flex;
     flex-direction: column;
  }
-
 .aside-cart-container {
     display: flex;
     background: white;
