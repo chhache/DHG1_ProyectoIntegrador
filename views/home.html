@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet">
+    <!-- cdnjs.com/libraries/font-awesome -->
+    <!-- FABICOM -> img 24x24 en el nombre del page -->
+    <link rel="icon" type="images/png" href="/images/zapa1.jpg">
+    <link rel="stylesheet" href="css/home.css">
+   
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container--flex">      
+        <!-- class -> se puede repetir se usasn en CSS / ID -> son unicos, se usan en JS -->
+            <div class="main-header__container">        
+            <h1 class="main-header__title">Goggles</h1> 
+            <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+            <nav class="main-nav" id="main-nav">
+                <!-- atajo EMET -> ul.menu>li.menu__item*5>a.menu__link -->
+                <ul class="menu">
+                    <li class="menu__item"><a href="" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">About</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Features</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Shop</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+                </ul>
+            </nav>
+            </div>             
+            <div class="main-header__container">
+                <span class="main-header__txt">Need Help</span>
+                <p class="main-header__txt"> <i class="fas fa-phone"></i>  Call 00-00000</p>                
+            </div>  
+            <div class="main-header__container">
+                <a href="" class="main-header__link"><i class="fas fa-user"></i></a> 
+                <a href="" class="main-header__btn">My Cart  <i class="fas fa-shopping-cart"></i></a>
+                <input type="search" class="main-header__input" placeholder="Buscar productos ..."><i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+    <!-- slider     -->
+    <!--  -->
+    <main class="main">
+        <div class="container">
+            <h2 class="main-title">New arrivals</h2>
+            <section class="container-products">
+                <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
+            <div class="product">
+                <img src="images/zapa1.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Air Jordan 2015</h3>
+                    <span class="product__price">$16.500</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
+            </div>
+            <div class="product">
+                <img src="images/zapa1.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Air Jordan 2011</h3>
+                    <span class="product__price">$18.000</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
+            </div>
+            <div class="product">
+                <img src="images/zapa1.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Air Jordan 2020</h3>
+                    <span class="product__price">$19.500</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
+            </div>
+            <div class="product">
+                <img src="images/zapa1.jpg" alt="" class="product__img">
+                <div class="product__description">
+                    <h3 class="product__title">Air Jordan 2018</h3>
+                    <span class="product__price">$18.670</span>
+                </div>
+                <i class="product__icon fas fa-cart-plus"></i>
+            </div>            
+        </section>
+       
+        <section class="container__testimonial">
+            <h2 class="section__title">Testimonials</h2>
+            <h3 class="testimonial__tittle">Anamaria</h3>
+            <p class="testimonial__txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid illum autem ad. Unde, praesentium odio tempora perspiciatis ratione, qui impedit in iure, voluptatibus nisi recusandae magni reprehenderit cumque consectetur facilis?</p>
+        </section>
+            <section class="container-tips">
+            <!-- .tip*3>h2.tip__tittle+p.tip__txt+a.tip__btn -->
+            <div class="tip">
+                <i class="far fa-hand-paper"></i>
+                <h2 class="tip__tittle">Satisfaction Guarenteed</h2>
+                <p class="tip__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nemo doloribus amet dignissimos, maiores at nihil tenetur dolore mollitia quis totam ullam ipsam repellat molestiae saepe ipsa vitae omnis libero!  </p>
+                <a href="" class="btn-shop">SHOP NOW</a>
+            </div>
+            <div class="tip">
+                <i class="fas fa-rocket"></i>
+                <h2 class="tip__tittle">Fast Shipping</h2>
+                <p class="tip__txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam cupiditate voluptatum mollitia odio expedita, suscipit blanditiis dolores amet iste, laborum velit in eum! Beatae aut perspiciatis, sunt temporibus placeat tenetur.</p>
+                <a href="" class="btn-shop">SHOP NOW</a>
+            </div>
+            <div class="tip">
+                <i class="fas fa-cog"></i>
+                <h2 class="tip__tittle">UV Protection</h2>
+                <p class="tip__txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam cupiditate voluptatum mollitia odio expedita, suscipit blanditiis dolores amet iste, laborum velit in eum! Beatae aut perspiciatis, sunt temporibus placeat tenetur.</p>
+                <a href="" class="btn-shop">SHOP NOW</a>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <!-- Atajo EMET ->.footer__section*>h2.footer__title+p.footer_txt -->
+        <div class="footer__section">
+            <h2 class="footer__title">About us</h2>
+            <p class="footer__txt">Texto ...</p>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__title">Location :</h2>
+            <p class="footer__txt">0926k 4th ...</p>
+            <h2 class="footer__title">Contact</h2>
+            <p class="footer__txt">Phone: 00 0000</p>
+            <p class="footer__txt">Email: nn@nn.com</p>
+        </div>        
+        <div class="footer__section">
+            <h2 class="footer__title">Quick Links</h2>
+            <a href="" class="footer__link">Shop</a>
+            <a href="" class="footer__link">Home</a>
+            <a href="" class="footer__link">About</a>
+            <a href="" class="footer__link">Contact us..</a>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__title">Sign Up:</h2>
+            <p class="footer__txt">By susbscribing to our mailing....</p>
+            <input type="email" class="footer__input" placeholder="Enter you r mail ...">
+        </div>
+        </div>        
+        <p class="copy">° 2021 Googles. All Rigths Reserved | Design by Pegasus</p>
+    </footer>
+    <!-- <h4>° 2021 Googles. All Rigths Reserved | Design by Pegasus</h4> -->
+    <script src="menu.js"></script>
+    </body>
+</html>
