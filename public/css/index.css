@@ -13,6 +13,7 @@ h1{
 body{
     margin: 0;
     font-family: "Inconsolata";
+    background-color: #fafafa;
 }
 img {
     display: block;
@@ -21,6 +22,7 @@ img {
 /* ----MAIN HEADER----- */
 .main-header{
     padding: 0 10px;
+    background-color: white;
 }
 .main-header__img{
     width: 40%;
@@ -147,6 +149,7 @@ main{
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
+    background: white;
 }
 .product:before{
     /* content: new -> agrega texto con pseudo elementos | Label en los productos*/
