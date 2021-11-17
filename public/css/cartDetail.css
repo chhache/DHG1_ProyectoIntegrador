@@ -1,3 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+  }
+  img{
+    display: block;
+    width: 100%;   
+}
+body{
+    background-color: #fafafa;
+}
+/* ----MAIN HEADER----- */
+.main-header{
+    display: flex;
+    padding: 30px 5px;
+    background-color: #e9e9e9;    
+}.main-header__img{
+    width: 100%;
+    border-left: 130px;
+}
+.main-header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
 
 /*CART DETAIL*/
 
@@ -105,3 +134,4 @@ section.productCart {
     }
 
 }
+  

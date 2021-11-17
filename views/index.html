@@ -11,15 +11,12 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header>
-        <!-- https://www.sportline.com.ar/    -->
-        <!-- https://www.stockcenter.com.ar/home -->
-        <!-- Encabezado -> Logo + barra de búsqueda -->
+    <header>        
         <div class="main-header">
             <div class="container container-flex">
                 <!-- class -> se puede repetir se usasn en CSS / ID -> son unicos, se usan en JS -->
                 <div class="main-header__container"> 
-                    <img class="main-header__img" src="images/dCompras-1-C.png" alt="Logo dCompras">       
+                    <img class="main-header__img" src="images/logo-dCompras-01.svg" alt="Logo dCompras">       
                     <!-- <h1 class="main-header__title">dCompras</h1>  -->
                     <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>                
                 </div>             
@@ -28,10 +25,11 @@
                     <p class="main-header__txt"> <i class="fas fa-phone"></i>  Tel +54 011-123456</p>                
                 </div>  
                 <div class="main-header__container">
-                    <a href="/register" target="_blank" class="main-header__link__txt"> Inicia Sesión  |  Registrate </a> 
-                    <a href="/register" target="_blank" class="main-header__link"><i class="fas fa-user"></i></a> 
-                    <a href="#" target="_blank" class="main-header__btn">Mis Compras  | <i class="fas fa-shopping-cart"></i></a>
-                    <input type="search" class="main-header__input" placeholder="Buscar producto..."><i class="fas fa-search"></i>
+                    <a href="/login" target="_blank" class="main-header__link__txt"> Inicia Sesión  |  Registrate </a> 
+                    <a href="/login" target="_blank" class="main-header__link"><i class="fas fa-user"></i></a> 
+                    <a href="/productCart" target="_blank" class="main-header__btn">Mis Compras  | <i class="fas fa-shopping-cart"></i></a>
+                    <input type="search" class="main-header__input" placeholder="Buscar producto...">
+                    <!-- <i class="fas fa-search"></i> -->
                 </div>
             </div>
             <nav class="main-nav" id="main-nav">
@@ -47,7 +45,7 @@
         </div> 
     </header>
     <div class="banner-psc">
-        <img src="images/pexels-pixabay-163444.jpg" alt="Banner">
+        <img src="images/carrusel3.jfif" alt="Banner">
     </div>    
     <main class="main">
         <div class="container">
@@ -55,33 +53,33 @@
             <section class="container-products">
                 <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
             <div class="product">
-                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <img src="images/demo-product-4.jpg" alt="" class="product__img">
                 <div class="product__description">
-                    <h3 class="product__title">Nike Air 2015</h3>
+                    <h3 class="product__title">Adidas Runner 2015</h3>
                     <span class="product__price">$16.500</span>
                 </div>
                 <i class="product__icon fas fa-cart-plus"></i>
             </div>
             <div class="product">
-                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <img src="images/demo-product-4.jpg" alt="" class="product__img">
                 <div class="product__description">
-                    <h3 class="product__title">Nike Air 2011</h3>
+                    <h3 class="product__title">Adidas Runner 2011</h3>
                     <span class="product__price">$18.000</span>
                 </div>
                 <i class="product__icon fas fa-cart-plus"></i>
             </div>
             <div class="product">
-                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <img src="images/demo-product-4.jpg" alt="" class="product__img">
                 <div class="product__description">
-                    <h3 class="product__title">Nike Air 2020</h3>
+                    <h3 class="product__title">Adidas Runner 2020</h3>
                     <span class="product__price">$19.500</span>
                 </div>
                 <i class="product__icon fas fa-cart-plus"></i>
             </div>
             <div class="product">
-                <img src="images/img-nike.jpg" alt="" class="product__img">
+                <img src="images/demo-product-4.jpg" alt="" class="product__img">
                 <div class="product__description">
-                    <h3 class="product__title">Nike Air 2018</h3>
+                    <h3 class="product__title">Adidas Runner 2018</h3>
                     <span class="product__price">$18.670</span>
                 </div>
                 <i class="product__icon fas fa-cart-plus"></i>

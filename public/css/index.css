@@ -1,21 +1,17 @@
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins-Bold.ttf);
-}
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 h1{
-    font-family: "Poppins";
+    /* font-family: "Poppins"; */
 }
 body{
     margin: 0;
-    font-family: "Inconsolata";
+    /* font-family: "Inconsolata"; */
     background-color: #fafafa;
 }
-img {
+img{
     display: block;
     width: 100%;
 }
@@ -39,16 +35,18 @@ img {
 .main-header__container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     margin: 5px;
 }
 .icon-menu{
+    height: 10%;
     font-size: 1.5em;
     border: 1px solid #454546; 
     display: block;
     padding: 10px 20px;
     cursor: pointer;
-    margin-left: auto;
+    /* margin-left: auto; */
+    margin-top: 20px;
 } 
 .main-header__link__txt{
     display: none;
@@ -73,11 +71,10 @@ img {
     width: 50%;    
 }
 main{
-    padding: 20px;
+    padding: 10px;
 }
 /* Estilos del menu */
 .main-nav{
-    /* display: none; */
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
@@ -85,16 +82,16 @@ main{
     /* position: relative; */
 }
 .menu{
-    position: absolute;
+    display: flex;
+    position: absolute;    
     top: 130px;
     left: 0;
     background-color: #212121;
-    width: 100%;
     list-style: none;
     padding: 0px;
     margin: 0;        
 }
-.menu__item{
+.menu__item{    
     text-align: center;   
     margin: auto;
 }
@@ -163,17 +160,21 @@ main{
     width: 50px;
     transform: rotate(-90deg);   
 }
-.product__img{
-    width: 100%;
-    height: 120px;
-    object-fit: scale-down ;
-} 
+/* .product__img{    
+    justify-content: center;
+    width: 80%;
+    height: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+    object-fit: scale-down ; 
+}  */
 .product__title{
     text-align: center;
 }
 .product__price{
     color: #ff4e00;
     font-weight: bold;
+    margin-top: 10px;
 }
 .product__icon{
     display: block;
@@ -182,16 +183,16 @@ main{
 .container__testimonial{
     text-align: center;    
     background-color: #f7f7f7;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 10px;
+    margin: 10px 0;
 }
 .testimonial__txt{
     color: #333;
 }
 .container-tips{
-    margin: 30px 10px;
+    margin: 20px 10px;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
 }
 .btn-shop{
     display: block;
@@ -210,7 +211,7 @@ main{
     color: #fff;
 }
 .tip i{
-    font-size: 2em;
+    font-size: 1.5em;
     color: #333;
     padding: 20px 0;
 }
@@ -218,7 +219,7 @@ main{
 .main-footer{
     background-color: #151515;
     color: #fff;
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
 .footer__title{
     border-bottom: 1px dotted #555;
@@ -339,8 +340,8 @@ footer i{
         /* justify-content: center; 
         align-items: center; */ 
         margin: auto ;
-        width: 70%;
-        height: 10%;        
+        width: 100%;
+        /* height: 10%;         */
     }
     .container-products{
         grid-template-columns: repeat(4,1fr);
@@ -373,7 +374,7 @@ footer i{
 }
 @media screen and (min-width: 1080px){
     .container{
-        width: 1200px;
+        width: 1010px;
         margin: auto;
     }
     .main-header__container:nth-child(2){
@@ -383,342 +384,12 @@ footer i{
         padding-left: 60px;
     }    
 }    
+/* ESTILOS RESPONSIVE WEB */
+@media screen and (min-width: 1024px){
+     .container{ 
+        /* Limitar contenido del Header  */
+        width: 1010px;
+        margin: auto;
+    }
+} 
 
-
-
-/* *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #ebebeb;;
-}
-h4{
-    font-size: 18px; 
-    font-weight: 900;
-    padding-bottom: 10px;
-}
-p{    
-    font-size: 12px;
-   border: 1px solid #000; 
-} */
-/* ---HEADER--- */
-/* header{    
-    background-color: #FAEDCD; 
-    height: 12.5vw;
-    padding: 1em;
-    border: 1px solid #000;
-}
-div.top-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;  
-    align-items: center;   */
-    /* border: 1px solid #000;  */
-/* } */
-/* header div.top-header p{
-    width: 100vw;
-    text-align: center; 
-    margin-top: 10px;
-    border: 1px solid #000; 
-} */
-/* header div.logo{
-    width: 25vw;
-}
-header .form{    
-    width: 50vw;    
-}
-header img{
-    display: flex;
-    justify-content: flex-start; */
-    /* max-height: 80%;
-    min-height: 20%; */
-    /* width: 60%;
-    padding: 0 10px; */
-    /* width: 10px;
-    height: 5px; */
-/* }
-header .form{
-    width: 70%;
-    display: flex;
-    align-items: center;      
-    flex-grow: 0.5;
-    padding: 5px;
-    font-size: 12px; 
-}
-header .form .input{
-    background-color: #FFF;
-    outline: none;
-    color: #666; 
-    padding: 1%;  
-    border-radius: 0.5vw;
-    width: 30vw;
-    height: 25%; */
-    /* border: 1px solid #000; */        
-/* }
-header .form .submit{
-    background-color: #FFF;       
-    color: #666;   
-    padding: 1%;
-    border-radius: 0.5vw;
-    width: 6vw;
-    height: 25%;
-    /* border: 1px solid #000; */     
-/* }
-header div.login a{
-    display: none;
-    visibility: hidden;
-    text-decoration: none;
-    color: #000; 
-}
-header .icons{    
-    width: 15%; 
-    display: flex;
-    align-items: center; 
-    justify-content: space-evenly;
-} */
-/* header nav{
-    /* display: none; */
-    /* ocultar barra nac con display (no representa el bloque y el espacio colapsado) */
-    /* visibility oculta con su propiedad hidden el bloque, pero sigue representando el espacio */
-    /* display: flex;
-    align-items: center;
-    width: 50vw;
-    font-size: 16px;
-    font-weight: 900; */
-    /* margin: 20px 0; */
-    /* padding-bottom: 10px; */
-    /* padding: 15px; */
-    /* border: 1px solid #000;
-} */
-/* header ul li{
-    list-style-type: none;
-}
-header ul li a{
-    text-decoration: none;
-    color: #000;    
-} */
-/* 
-header .navbar{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 20%;
-    width: 60vw;
-    border: 1px solid #000;     */
-/* } 
-header .navbar a{
-    font-size: 16px;
-    font-weight: 900;
-    color: rgb(37, 37, 37);
-    text-decoration: none; */
-    /* color: #000;  */
-/* }
-div.last-visit,
-div.offers{
-    display: flex;
-    flex-wrap: wrap;
-}
-.price{
-    font-size: 18px;
-    width: 30%;    
-}
-.discount{
-    color: #39b54a; */
-    /* font-size: 16px;
-    font-weight: normal;  */
-    /* width 70%; */
-    /* padding: 15px; */
-/* }
-.discount,
-.description{
-    font-size: 16px;
-    font-weight: normal;
-}
-h3,
-.description{
-    color: #666;
-}    
-.description{
-    display: none;
-    margin-top: 20px; */
-    /* font-weight: 900;     */
-/* }
-article .description {
-    visibility: hidden;
-}
-article:hover .description{
-    visibility: visible;
-} */
-/* --- SECTION BANNER --- */
-/* section.banner img{
-    width: 100%;
-} */
-/* --- MAIN --- */
-/* main{
-    display: flex;
-    flex-wrap: wrap;
-    width: 40vw;
-    margin: auto;
-    background-color: #ebebeb;  */
-    /* margin: 30px;  */
-    /* margin-bottom: 10px; */
-    /* padding: 10px;   */
-/* } */
-/* main section article{
-    background-color: #FFF;
-    margin: 10px 10px;    
-} */
-/* main section div.main-article{
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: baseline;
-    position: relative;
-    width: 50dw;
-    padding: 15px; 
-    border-top: 1px solid #ebebeb; */
-    /* border: 2px solid #000;  */    
-/* }
-main section article img{
-    width: 100%;    
-}
-main section article i,     
-.discount{     */
-    /* border: 1px solid #39b54a; */
-    /* color: #39b54a;      
-}
-main section article i{
-    display: block; 
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;  
-    right: 10px;
-    top: -15px;       
-}
-main article i{
-    transition: 1.5s;    
-}
-main article i:hover{
-    transform: rotateZ(-90deg) ;
-}
-main section h3{
-    margin: 20px 0px;
-}
-main section article p{ */
-    /* display: flex; */
-    /* flex-wrap: wrap;     */
-    /* border: solid 2px blue; */
-    /* width: 30%; */
-/* }
-.products{
-    width: 90vw; */
-    /* background-color: lightgrey; */
-    /* border: dotted 3px black; */
-    /* text-align: center; */
-/* }
-footer article{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    text-align: left; */
-    /* border: solid 2px blue; */
-    /* background-color: #FAEDCD; */
-    /* background-color: #889eaf;
-    text-decoration: none;
-}
-footer article div.menu{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 24px; */
-    /* margin-bottom: 5px; */
-    /* padding: 10px; */
-    /* color: #252525;
-} */
-/* footer article i{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 24px;
-    margin-bottom: 5px;
-    padding: 10px; 
-    color: #252525;
-} */
-/* footer ul li{
-    padding-bottom: 15px;
-    list-style-type: none;
-}
-footer ul li a{
-    text-decoration: none;
-    color: #000;    
-}
-footer article:last-child{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; */
-    /* background-color: #D4A373; */
-    /* background-color: #506d84;
-    font-size: 40px;
-    font-weight: bold;
-}
-footer img{
-    display: flex;
-    justify-content: flex-start;
-    max-height: 80%;
-    min-height: 20%;
-    width: 40%;
-    padding: 5px; */
-    /* width: 10px;
-    height: 5px; */
-/* ]} */
-/* ---@media querys---*/
-/* @media (min-width: 361px){
-    main section article .description{
-        display: block; */
-        /* display: none; */
-    /* }
-    main section article{
-        box-shadow: 15px 0px 10px rgb(50, 50,50); 
-    }
-    main section div.products{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start; 
-    }    
-    main section div.products article{
-        width: 45%; 
-    }
-    .price,
-    .discount{
-        width: 50%;
-    }
-    header nav{
-        display: block;
-        visibility: hidden;
-    }
-}
-@media (min-width: 768px){
-    main section article{
-     border: solid 1px #ebebeb; 
-     margin-bottom: 15px;         
-}
-    main section div.products article{
-        width: 22%;
-    }
-    div.menu-burguer{
-        display: none;
-    }
-    header nav{
-        display: block;
-       visibility: visible; 
-    }
-}  */
- 
