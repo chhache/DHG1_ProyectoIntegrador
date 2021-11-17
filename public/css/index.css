@@ -17,8 +17,14 @@ img{
 }
 /* ----MAIN HEADER----- */
 .main-header{
-    padding: 0 10px;
-    background-color: white;
+    /* padding: 0 0px; */
+    background-color: #fafafa;
+}
+.main-header__container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 5px;
 }
 .main-header__img{
     width: 40%;
@@ -31,12 +37,6 @@ img{
     margin: 10px 0;
     color: #454546;
     font-family: "Poppins";
-}
-.main-header__container{
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    margin: 5px;
 }
 .icon-menu{
     height: 10%;
@@ -102,26 +102,6 @@ main{
     position: relative;
     display: block;
 }
-/* .menu__link::before{
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-right: 2px solid #eead33;
-    border-top: 2px solid #eeAD33;
-    top: 0;
-    right: 0;
-    opacity: 0;
-}
-.menu__link::after{
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-left: 2px solid #eead33;
-    border-bottom: 2px solid #eead33;
-    top: 0;
-} */
 .menu__link:hover{
     background-color: #fff;
     color: #212121;
@@ -168,6 +148,10 @@ main{
     text-align: center;
     object-fit: scale-down ; 
 }  */
+.product a{
+    text-decoration: none;
+    color: #444;
+} 
 .product__title{
     text-align: center;
 }
@@ -196,7 +180,7 @@ main{
 }
 .btn-shop{
     display: block;
-    border: 2px solid #FF4E00;
+    border: 2px solid #12af9a;
     color: #333;
     font-weight: bold;
     padding: 10px;
@@ -207,7 +191,7 @@ main{
     transition: all 0.5s;    
 }
 .btn-shop:hover{
-    background-color: #ff4e00;
+    background-color: #12af9a;
     color: #fff;
 }
 .tip i{
@@ -273,7 +257,7 @@ footer i{
     .main-header .container-flex{
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-around; 
     }
     .main-header__container{
         flex-wrap: wrap;

@@ -17,9 +17,10 @@ body{
     display: flex;
     padding: 30px 5px;
     background-color: #e9e9e9;    
-}.main-header__img{
-    width: 100%;
-    border-left: 130px;
+}
+.main-header__img{
+    width: 80%;    
+    border-left: 30px;
 }
 .main-header__container{
     display: flex;

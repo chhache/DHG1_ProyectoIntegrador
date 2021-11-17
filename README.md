@@ -21,3 +21,16 @@ Sitios web de refencia:
 5- https://www.sportline.com.ar/
 
 Los sitios de referencia fueron elegidos por ser los principales comercios de indumentaria en el mercado. En general mantienen un estilo similar que brinda una facil navegacion y es amigable para el usuario.
+
+
+Estilos:
+
+Paleta Colores
+Containers: #fff;
+Background-color: #fafafa;
+Verde: #12af9a;
+Color: #444;
+
+Tipografía:
+'Roboto', Sans Serif;
+

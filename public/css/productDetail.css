@@ -5,12 +5,28 @@
     font-family: 'Roboto', sans-serif;
     color: #444;
   }
-  /* img{
+  img{
     display: block;
     width: 100%;   
-} */
+}
 body{
     background-color: #fafafa;
+}
+/* ----MAIN HEADER----- */
+.main-header{
+    display: flex;
+    padding: 30px 5px;
+    background-color: #e9e9e9;    
+}
+.main-header__img{
+    width: 80%;    
+    border-left: 30px;
+}
+.main-header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
 }
 /*PRODUCT DETAIL PAGE */
 

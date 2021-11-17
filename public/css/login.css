@@ -18,8 +18,9 @@ body{
     padding: 30px 5px;
     background-color: #e9e9e9;    
 }.main-header__img{
-    width: 100%;
+    width: 80%;
     border-left: 130px;
+    padding: 0 40px;
 }
 .main-header__container{
     display: flex;
@@ -30,7 +31,7 @@ body{
 /* -- DIV -- */
 .container{
       width: 100%;
-      height: 100vh;
+      height: 60vh;
       padding: 10px;
       display: flex;
       justify-content: center;
@@ -54,14 +55,14 @@ body{
       font-size: 24px;
       font-weight: 900;
       color: #797979;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
   }
   .register h3{
     display: inline;  
     font-size: 18px;
     text-align: center;
     color: #797979;
-    margin-top: 20px;
+    margin-top: 15px;
 }
   .register input{
       width: 100%;
@@ -81,9 +82,10 @@ body{
   }
   .register .submit{
       width: 100%;
-      padding: 10px;
+      padding: 8px;
       margin-bottom: 25px;
-      background-color: #f17108;
+      /* background-color: #f17108; */
+      background-color: #12af9a;
       color: #fff;
       font-size: 16px;
       box-shadow: 1px 1px 10px 0px rgba(0,0,0,.5);
@@ -94,6 +96,8 @@ body{
     font-size:18px;    
 }
   .register a{
+      color: blue;
+      font-weight: bold;
       display: flex; 
       justify-content: space-around;
       margin-bottom: 20px;
@@ -120,7 +124,7 @@ body{
   .login{
       /* agregar color degradado */
       /* background-image: linear-gradient(to bottom right, #1ab6b6, #4cac6e); */
-      background-image: linear-gradient(to bottom right, #1ab6b6, #12af9a);
+      background-image: linear-gradient(to bottom right, #36d4d4, #12af9a);
       padding: 40px;    
   }
   .login h2{
@@ -139,7 +143,7 @@ body{
   }
   .login button i{
       position: absolute;
-      top: 12px;
+      top: 14px;
       left: 12px;
   }
   .login .fb{
@@ -175,7 +179,7 @@ body{
     color: #fff; 
     text-decoration: none;
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-around;    
     margin-top: 5px;         
 }
 .login-items a:hover {
@@ -186,18 +190,24 @@ body{
   /* -- Mobile-last -- */
   @media only screen and (max-width: 768px){
       .login-container{
-          display: block;
+        display: block;
+        position: relative;
+        top: 40%;          
       }
       .register,
       .login{
-          flex: none;
+          flex: none;                 
       }
       .register::after{
           top: unset;
           bottom: -25px;
           left: 50%;
           transform: translateX(-50%) rotate(90deg);
-      }    
+      }
+      h2{
+          font-size: 1px;
+      }
+
   }
   /* ESTILOS RESPONSIVE WEB */ 
   @media screen and (min-width: 1024px){

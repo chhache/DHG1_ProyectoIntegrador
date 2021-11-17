@@ -15,7 +15,7 @@ img{
     background-color: #e9e9e9;  
 
 }.main-header__img{
-    width: 60%;
+    width: 80%;
     border-left: 30px;
 }
 .main-header__container{
@@ -30,7 +30,7 @@ body{
 }
 .container{
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -97,13 +97,13 @@ body{
 .register-2 .submit{    
     position: absolute;
     width: 60%;
-    top: 90%;
+    top: 82%;
     left: -90px;
     padding: 15px;
     text-align: center;    
     font-size: 14px;
     font-weight: 500;    
-    background-color: #f17108;
+    background-color: #12af9a;
     color: #fff;    
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,.5);
     transform: translateY(20%);
@@ -111,7 +111,7 @@ body{
     cursor: pointer;
 }
 .register-2 .submit:hover {
-    padding:18px;
+    padding:16px;
     font-size:16px;
 }
 /* input:invalid {
