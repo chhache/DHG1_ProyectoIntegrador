@@ -11,9 +11,18 @@
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/index.html"><img class="main-header__img" src="images/logo-dCompras-01.svg" alt="Logo dCompras"></a>       
+                </div>                               
+            </div>            
+        </div> 
+    </header>
     <div class="container">
         <div class="login-container">
-            <div class="register">
+            <div class="register-1">
                 <h2>Registrarse</h2>
                     <form action="">
                         <input type="text" placeholder="Nombre" class="nombre"> 
@@ -23,14 +32,17 @@
                         <input type="submit" class="submit" value="REGISTRARSE">
                     </form>
             </div>
-            <div class="login">
-                <h2>Iniciar Sesión</h2>
+            <div class="register-2">
+                <!-- <h2>Iniciar Sesión</h2> -->
                 <!-- <h3>Acceder con ...</h3> -->
-                <div class="login-items">
-                    <button class="fb"><i class="fab fa-facebook-f"></i>   Facebook</button>
-                    <button class="tw"><i class="fab fa-twitter"></i>   Twitter</button>
-                    <button class="correo"><i class="fas fa-envelope"></i>   Correo</button>    
-                </div>
+                <form action="">
+                    <input type="text" placeholder="Nombre" class="nombre"> 
+                    <input type="text" placeholder="Correo" class="correo">
+                    <input type="password" placeholder="Contraseña" class="pass">
+                    <input type="password" placeholder="Confirmar contraseña" class="repass">
+                    <input type="submit" class="submit" value="REGISTRARSE">
+                </form>
+                
             </div>
         </div>
     </div>
