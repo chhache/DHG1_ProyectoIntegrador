@@ -2,7 +2,7 @@
   "name": "Pegasus",
   "version": "1.0.0",
   "description": "Grupo 1 - Pegasus",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "npm app.js"
   },
