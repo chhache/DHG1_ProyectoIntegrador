@@ -5,16 +5,16 @@ const mainController = {
         res.render('index')
     },
     register: function (req,res){
-        res.render('register')
+        res.render('users/register')
     },
     productDetail: function (req,res){
-        res.render('productDetail')
+        res.render('products/productDetail')
     },
     productCart:function (req,res){
-        res.render('productCart')
+        res.render('products/productCart')
     },
     login:function (req,res){
-        res.render('login')
+        res.render('users/login')
     },
     redirect:function(req,res){
         res.render('index')

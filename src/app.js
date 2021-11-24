@@ -25,25 +25,4 @@ app.set('views', path.resolve(__dirname,'views'));
 // app.listen(port, () => console.log(`Servidor corriendo en port ${port}`)); -> conf sin acceso a HEROKU
 app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en port ${port}`));
 
-
-//Al objeto app le pedimos el método get
-//Recibe dos parámetros -> 1° string que define la URL del path 2° callback con dos parámetros req,res
-//req -> las prop y métodos de la petición / res -> las prop y métodos de la respuesta a enviar
-//Dentro del callback al obj res le pedimos el método send, pasamos lo que queremos mostras en el navegador (msn ó file)
-//Dentro del método sendFile() utilizaremos el método join() que nos brinda el path completo del file
-//__dirname -> const de Node.js que hacer referencia al directorio actual | /views/home.html -> es el path relativo
-
-/*app.get('/', (req, res) => res.sendFile(path.join(__dirname, "/views/index.html")));
-app.get('/register', (req, res) => res.sendFile(path.join(__dirname, "/views/register.html")));
-app.get('/productDetail', (req, res) => res.sendFile(path.join(__dirname, "/views/productDetail.html")));
-app.get('/productCart', (req, res) => res.sendFile(path.join(__dirname, "/views/productCart.html")));
-app.get('/login', (req, res) => res.sendFile(path.join(__dirname, "/views/login.html")));
-
-app.post("/register", (req,res) =>{res.redirect("/")});*/
-
 app.use('/', mainRoutes)
-//opcional
-//recibe argu dirActual, ./ subir un dir y buscar public
-//const publicPath = path.resolve(__dirname, './public'); 
-//Informar que queremos usar archivos estáticos -> path
-//app.use(express.static(publicPath))
