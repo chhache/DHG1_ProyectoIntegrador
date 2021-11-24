@@ -6,11 +6,17 @@ const app = express();
 const port = 3031
 //Requerir el módulo nativo path 
 const path = require('path');
+//Requerir mainRoutes
+const mainRoutes = require('./routes/mainRoutes');
 
 //Servicio de archivos estáticos (img, CSS y JS) se utiliza el middelware nativo express.static
 //Pasar el nombre del dir que continee los archivos etáticos y la fc express.static, para invocarla para varios archivos sse debe definir por separado
 //Informar que queremos usar archivos estáticos -> path
-app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, '../public')));
+
+//Seteo EJS
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname,'views'));
 //El obj app con el método listen se encargará de levantar el servidor
 //Recibe dos parámetros el puerto (modificar las comillas en el campo text para definir la var) y opcional el callback con el msn
 //configurar variable de entornoen la PC Virtual de Heroku dond se va a realizar el deploy de mi app
@@ -26,14 +32,16 @@ app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en po
 //Dentro del callback al obj res le pedimos el método send, pasamos lo que queremos mostras en el navegador (msn ó file)
 //Dentro del método sendFile() utilizaremos el método join() que nos brinda el path completo del file
 //__dirname -> const de Node.js que hacer referencia al directorio actual | /views/home.html -> es el path relativo
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, "/views/index.html")));
+
+/*app.get('/', (req, res) => res.sendFile(path.join(__dirname, "/views/index.html")));
 app.get('/register', (req, res) => res.sendFile(path.join(__dirname, "/views/register.html")));
 app.get('/productDetail', (req, res) => res.sendFile(path.join(__dirname, "/views/productDetail.html")));
 app.get('/productCart', (req, res) => res.sendFile(path.join(__dirname, "/views/productCart.html")));
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, "/views/login.html")));
 
-app.post("/register", (req,res) =>{res.redirect("/")});
+app.post("/register", (req,res) =>{res.redirect("/")});*/
 
+app.use('/', mainRoutes)
 //opcional
 //recibe argu dirActual, ./ subir un dir y buscar public
 //const publicPath = path.resolve(__dirname, './public'); 
