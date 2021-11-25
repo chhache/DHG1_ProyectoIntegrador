@@ -1,0 +1,46 @@
+[
+    {
+    "name": "Adidas Runner 2020",
+    "description": "Entrada Carpaccio de salmón con cítricos U$S 65.50",
+    "price": 65.50,
+    "id": 1,
+    "img1": "demo-product-1.jpg",
+    "img2": "demo-product-2.jpg",
+    "img3": "demo-product-3.jpg",
+    "img4": "demo-product-4.jpg",
+    "color":"blanco",
+    "size":42,
+    "category":"zaptillas",
+    "stock":3
+  },
+  {
+    "name": "Adidas Runner 2020",
+    "description": "Entrada Carpaccio de salmón con cítricos U$S 65.50",
+    "price": 65.50,
+    "id": 2,
+    "img1": "demo-product-1.jpg",
+    "img2": "demo-product-2.jpg",
+    "img3": "demo-product-3.jpg",
+    "img4": "demo-product-4.jpg",
+    "color":"blanco",
+    "size":42,
+    "category":"zaptillas",
+    "stock":3
+  },
+  {
+    "name": "Adidas Runner 2020",
+    "description": "Entrada Carpaccio de salmón con cítricos U$S 65.50",
+    "price": 65.50,
+    "id": 3,
+    "img1": "demo-product-1.jpg",
+    "img2": "demo-product-2.jpg",
+    "img3": "demo-product-3.jpg",
+    "img4": "demo-product-4.jpg",
+    "color":"blanco",
+    "size":42,
+    "category":"zaptillas",
+    "stock":3
+  }
+ 
+]
+  
