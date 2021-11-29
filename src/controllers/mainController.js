@@ -24,8 +24,11 @@ const mainController = {
     redirect:function(req,res){
         res.render('index')
     },
-    admin: function(req,res){
+    adminCreate: function(req,res){
         res.render('admin/createForm')
+    },
+    adminModif: function(req,res){
+        res.render('admin/modifForm')
     }
 }
 
