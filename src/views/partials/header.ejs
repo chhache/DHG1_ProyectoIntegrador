@@ -1,0 +1,33 @@
+<header>        
+    <div class="main-header">
+        <div class="container container-flex">
+            <!-- class -> se puede repetir se usasn en CSS / ID -> son unicos, se usan en JS -->
+            <div class="main-header__container"> 
+                <img class="main-header__img" src="images/logo-dCompras-01.svg" alt="Logo dCompras">       
+                <!-- <h1 class="main-header__title">dCompras</h1>  -->
+                <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>                
+            </div>             
+            <div class="main-header__container">
+                <span class="main-header__txt">Ayuda</span>
+                <p class="main-header__txt"> <i class="fas fa-phone"></i>  Tel +54 011-123456</p>                
+            </div>  
+            <div class="main-header__container">
+                <a href="/login" target="_blank" class="main-header__link__txt"> Inicia Sesión  |  Registrate </a> 
+                <a href="/login" target="_blank" class="main-header__link"><i class="fas fa-user"></i></a> 
+                <a href="/productCart" target="_blank" class="main-header__btn">Mis Compras  | <i class="fas fa-shopping-cart"></i></a>
+                <input type="search" class="main-header__input" placeholder="Buscar producto...">
+                <!-- <i class="fas fa-search"></i> -->
+            </div>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <!-- atajo EMET -> ul.menu>li.menu__item*5>a.menu__link -->
+            <ul class="menu">
+                <li class="menu__item"><a href="#" class="menu__link">Categorias</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Ofertas</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Marcas</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Ayuda</a></li>
+                <!-- <li class="menu__item"><a href="" class="menu__link">Contacto</a></li> -->
+            </ul>
+        </nav>
+    </div>
+</header>
