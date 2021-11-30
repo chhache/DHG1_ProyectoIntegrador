@@ -27,7 +27,7 @@ Roles según afinidad a tareas
 Entregas en término.
 
 More of:
-Adignación de tareas al principio del Sprint.
+Asignación de tareas al principio del Sprint.
 
 Start Doing:
 Code review (seleccionar herramienta).
@@ -41,7 +41,25 @@ Detalles de diseño -> evitar perdida de tiempo y completar entregables.
 
 
 - Sprint 3 (01.12.2021)
+Keep doing:
+Entregas en término.
+Delegación de tareas segun afinidad.
 
+More of:
+Asignación de tareas al principio del Sprint.
+Code review.
+Generar weekly standups -> weekly.md
+
+Start Doing:
+Estandarización de código y revisión.
+Debatir mejoras en gral (Código / Diseño / etc)
+
+Stop Doing:
+
+Less Of:
+
+
+- Sprint 4 (15.12.2021)
 
 
 Integrantes:
