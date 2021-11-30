@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet">
-    <link rel="stylesheet" href="../css/createForm.css">
+    <link rel="stylesheet" href="/css/createForm.css">
 </head>
 <body>
     <header>     
@@ -28,20 +28,18 @@
                     <form action="" method="POST">
                         <input type="text" placeholder="Nombre del producto" name="nombre" required  > 
                         <input type="text" placeholder="Descripción" name="Descripcion" required>
-                        <input type="image" placeholder="Imagen" name="Imagen" >
-                        <input type="text" placeholder="Categoria" name="repass">                        
+                        <input type="image" placeholder="Imagen" name="Imagen" required >
+                        <input type="text" placeholder="Categoria" name="repass" required >                        
                     </form>
             </div>            
             <div class="register-2">
                 <form action="">
-                    <input type="text" placeholder="Precio" name="Precio"> 
-                    <input type="text" placeholder="Color" name="Color">
-                    <input type="text" placeholder="Talle" name="Talle">
-                    <input type="text" placeholder="Genero" name="Genero">                                      
-                    <input type="date" placeholder="" name="Createdate">                    
+                    <input type="text" placeholder="Precio" name="Precio" required > 
+                    <input type="text" placeholder="Color" name="Color" required>
+                    <input type="text" placeholder="Talle" name="Talle" required>
+                    <input type="text" placeholder="Genero" name="Genero" required>                                      
+                    <input type="date" placeholder="" name="Createdate" required>                    
                     <input type="submit" class="submit" value="AGREGAR">
-                    
-                    
                 </form>
             </div>    
         </div>         

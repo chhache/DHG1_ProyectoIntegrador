@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const mainController = {
     index: function (req,res){
-        res.render('index')
+        res.render('index', {producto: listadoProductos})
     },
     register: function (req,res){
         res.render('users/register')
@@ -22,13 +22,16 @@ const mainController = {
         res.render('users/login')
     },
     redirect:function(req,res){
-        res.render('index')
+        res.redirect('index')
     },
     adminCreate: function(req,res){
         res.render('admin/createForm')
     },
     adminModif: function(req,res){
-        res.render('admin/modifForm')
+        let idProduct = req.params.idProduct //id se refiere al :idProduct
+        const productoListado = listadoProductos() //traigo de nuevo el listado
+        let producto = productoListado.find(el => el.id == idProduct) //busco un solo elemento del array que tenga el id
+        res.render('admin/modifForm', {producto});
     }
 }
 
