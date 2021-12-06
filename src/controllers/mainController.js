@@ -37,7 +37,7 @@ const mainController = {
 
 //Funcion para transofmar el archivo JSON 
 const listadoProductos = function () {
-    let listadoJson = fs.readFileSync(path.resolve(__dirname, '../db/listadoProductos.json'),'utf-8');
+    let listadoJson = fs.readFileSync(path.resolve(__dirname, '../data/productos.json'),'utf-8');
     return JSON.parse(listadoJson)
   }
 

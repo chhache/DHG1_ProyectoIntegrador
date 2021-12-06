@@ -1,0 +1,47 @@
+[
+{
+"id": 0,
+"firstName": "hola",
+"lastName": "chau",
+"email": "email@asd.com",
+"password": "password",
+"category": "category",
+"image": "demo-product-4.jpg"
+},
+{
+    "id": 1,
+    "firstName": "hola",
+    "lastName": "chau",
+    "email": "email@asd.com",
+    "password": "password",
+    "category": "category",
+    "image": "demo-product-4.jpg"
+},
+{
+    "id": 2,
+    "firstName": "hola",
+    "lastName": "chau",
+    "email": "email@asd.com",
+    "password": "password",
+    "category": "category",
+    "image": "demo-product-4.jpg"
+},
+{
+    "id": 3,
+    "firstName": "hola",
+    "lastName": "chau",
+    "email": "email@asd.com",
+    "password": "password",
+    "category": "category",
+    "image": "demo-product-4.jpg"
+},
+{
+    "id": 4,
+    "firstName": "hola",
+    "lastName": "chau",
+    "email": "email@asd.com",
+    "password": "password",
+    "category": "category",
+    "image": "demo-product-4.jpg"
+}
+]
