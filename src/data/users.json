@@ -1,12 +1,12 @@
 [
 {
-"id": 0,
-"firstName": "hola",
-"lastName": "chau",
-"email": "email@asd.com",
-"password": "password",
-"category": "category",
-"image": "demo-product-4.jpg"
+    "id": 0,
+    "firstName": "hola",
+    "lastName": "chau",
+    "email": "email@asd.com",
+    "password": "password",
+    "category": "category",
+    "image": "demo-product-4.jpg"
 },
 {
     "id": 1,

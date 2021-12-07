@@ -2,19 +2,13 @@ const express = require('express');
 const router = express.Router();
 const mainController = require('../controllers/mainController')
 
-router.get('/', mainController.index );
-router.get('/register', mainController.register );
-router.get('/productDetail/:id', mainController.productDetail );
-router.get('/productCart', mainController.productCart );
-router.get('/login', mainController.login );
-router.post('/register', mainController.redirect );
+router.get('/', mainController.index );             //Funciona.
 
-router.get('/createForm', mainController.adminCreate);
-//router.post('/admin/createForm', mainController.redirect);
+router.get('/register', mainController.register );  //Funciona.
+router.post('/register', mainController.redirect);  //Funciona. Aparece un ? luego de apretar el boton.
 
-router.get('/modifForm/:idProduct', mainController.adminModif);
-//router.post('/admin/modifForm', mainController.redirect);
-
+router.get('/login', mainController.login );        //Funciona.
+router.post('/login', mainController.redirect);     //Funciona. Aparece un ? luego de apretar el boton.
 
 
 

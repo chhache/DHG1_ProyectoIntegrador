@@ -3,6 +3,7 @@ const app = express();
 const port = 3031
 const path = require('path');
 const mainRoutes = require('./routes/mainRoutes');
+const productsRoutes = require("./routes/productsRoutes")
 
 //Servicio de archivos estáticos (img, CSS y JS) se utiliza el middelware nativo express.static
 app.use(express.static(path.resolve(__dirname, '../public')));
@@ -14,6 +15,8 @@ app.set('views', path.resolve(__dirname,'views'));
 app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en port ${port}`));
 
 app.use('/', mainRoutes);
+app.use('/products', productsRoutes);
+app.use('/createForm', productsRoutes);
 
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
