@@ -16,30 +16,28 @@
             <div class="container-flex">
                 <div class="main-header__container"> 
                   <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
-                  <h1>FORMULARIO DE CREACION DE PRODUCTOS</h1>      
+                  <h1>Creación de productos</h1>      
                 </div>
             </div>            
         </div> 
     </header>
     <div class="container">
         <div class="login-container">
-            <div class="register-1">
-                
-                    <form action="/products" method="POST">
-                        <input type="text" placeholder="Nombre del producto" name="nombre"   > 
-                        <input type="text" placeholder="Descripción" name="Descripcion" >
-                        <input type="image" placeholder="Imagen" name="Imagen"  >
-                        <input type="text" placeholder="Categoria" name="repass"  >                        
+            <div class="register-1">                                    
+                     <form action="/products" method="POST"> <!--enctype="multipart/form-data - Multer -->
+                        <input type="text" placeholder="Nombre del producto" name="name"   > 
+                        <input type="text" placeholder="Descripción" name="description" >
+                        <input type="image" placeholder="Imagen" name="img1"  >
+                        <input type="text" placeholder="Categoria" name="category"  >                        
                     </form>
             </div>            
             <div class="register-2">
-                <form action="">
-                    <input type="text" placeholder="Precio" name="Precio"  > 
-                    <input type="text" placeholder="Color" name="Color" >
-                    <input type="text" placeholder="Talle" name="Talle" >
-                    <input type="text" placeholder="Genero" name="Genero" >                                      
-                    <input type="date" placeholder="" name="Createdate" >                    
-                    <input type="submit" class="submit" value="AGREGAR">
+                <form action="products" method="POST">
+                    <input type="text" placeholder="Precio" name="price" > 
+                    <input type="text" placeholder="Color" name="color" >
+                    <input type="text" placeholder="Talle" name="size" >
+                    <input type="text" placeholder="Genero" name="gender" >
+                    <button type="submit" class="submit">Guardar producto</button>
                 </form>
             </div>    
         </div>         

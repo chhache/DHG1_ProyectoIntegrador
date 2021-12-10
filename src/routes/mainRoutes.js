@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mainController = require('../controllers/mainController')
+const mainController = require('../controllers/mainController');
 
 router.get('/', mainController.index );             //Funciona.
 
@@ -9,7 +9,5 @@ router.post('/register', mainController.redirect);  //Funciona. Aparece un ? lue
 
 router.get('/login', mainController.login );        //Funciona.
 router.post('/login', mainController.redirect);     //Funciona. Aparece un ? luego de apretar el boton.
-
-
 
 module.exports = router

@@ -16,35 +16,31 @@
             <div class="container-flex">
                 <div class="main-header__container"> 
                   <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
-                  <h1>FORMULARIO DE MODIFICACION DE PRODUCTOS</h1>      
+                  <h1>Modificar prodcuto</h1>      
                 </div>
             </div>            
         </div> 
     </header>
     <div class="container">
         <div class="login-container">
-            <% if (producto != undefined) { %>
             <div class="register-1">
-                    <form action="" method="POST">
-                        <input type="text" placeholder="Nombre del producto" name="nombre" required value="<%= producto.name %>"  > 
-                        <input type="text" placeholder="Descripción" name="Descripcion" required value="<%= producto.description %>" >
-                        <input type="image" placeholder="" name="Imagen"  value="<%= producto.img1 %>" >
-                        <input type="text" placeholder="Categoria" name="repass" value="<%= producto.category %>" >                        
-                    </form>
+                    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
+                        <input type="text" placeholder="Nombre del producto" name="name" required value="<%= productToEdit.name %>"  > 
+                        <input type="text" placeholder="Descripción" name="description" required value="<%= productToEdit.description %>" >
+                        <input type="image" placeholder="" name="img1"  value="<%= productToEdit.img1 %>" >
+                        <input type="text" placeholder="Categoria" name="category" value="<%= productToEdit.category %>" >                        
+                    <!-- </form>
             </div>            
              <div class="register-2">
-                    <form action="">
-                    <input type="text" placeholder="Precio" name="Precio" value="<%= producto.price %>" > 
-                    <input type="text" placeholder="Color" name="Color" value="<%= producto.color %>" >
-                    <input type="text" placeholder="Talle" name="Talle" value="<%= producto.size %>" >
-                    <input type="text" placeholder="Genero" name="Genero" value="<%= producto.gender %>" >                                      
-                    <input type="date" placeholder="" name="Createdate">                    
-                    <input type="submit" class="submit" value="MODIFICAR">
+                    <form action=""> -->
+                    <input type="text" placeholder="Precio" name="price" value="<%= productToEdit.price %>" > 
+                    <input type="text" placeholder="Color" name="color" value="<%= productToEdit.color %>" >
+                    <input type="text" placeholder="Talle" name="size" value="<%= productToEdit.size %>" >
+                    <input type="text" placeholder="Genero" name="gender" value="<%= productToEdit.gender %>" >
+                    <!-- <input type="submit" class="submit" value="MODIFICAR"> -->
+                    <button type="submit" class="submit">MODIFICAR</button>
                     </form>
-                </div>
-            <% } else { %>
-                <h2>No existe ese producto</h2>
-             <% } %>    
+                </div>           
         </div>
     </div>
 </body>
