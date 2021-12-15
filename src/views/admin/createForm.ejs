@@ -24,21 +24,21 @@
     <div class="container">
         <div class="login-container">
             <div class="register-1">                                    
-                     <form action="/products" method="POST"> <!--enctype="multipart/form-data - Multer -->
+                     <form action="../products" method="POST" enctype="multipart/form-data"> 
                         <input type="text" placeholder="Nombre del producto" name="name"   > 
                         <input type="text" placeholder="Descripción" name="description" >
-                        <input type="image" placeholder="Imagen" name="img1"  >
+                        <input type="file" placeholder="Imagen" name="img1" >
                         <input type="text" placeholder="Categoria" name="category"  >                        
-                    </form>
+                    <!-- </form>
             </div>            
-            <div class="register-2">
-                <form action="products" method="POST">
+            <div class="register-2"> -->
+                <!-- <form action="../products" method="POST"> -->
                     <input type="text" placeholder="Precio" name="price" > 
                     <input type="text" placeholder="Color" name="color" >
                     <input type="text" placeholder="Talle" name="size" >
                     <input type="text" placeholder="Genero" name="gender" >
                     <button type="submit" class="submit">Guardar producto</button>
-                </form>
+                    </form>
             </div>    
         </div>         
     </div>

@@ -20,6 +20,6 @@ app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 //app.use('/createForm', productsRoutes);
 
-
+module.exports = app;
 
 

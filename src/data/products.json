@@ -45,7 +45,7 @@
     "img4": "demo-product-4.jpg"
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Adidas Runner 2022",
     "description": "Entrada Carpaccio de salmón con cítricos",
     "price": 65.5,
@@ -73,5 +73,27 @@
     "img2": "demo-product-2.jpg",
     "img3": "demo-product-3.jpg",
     "img4": "demo-product-4.jpg"
-  }  
+  },
+  {
+    "id": 5,
+    "name": "Test 3",
+    "description": "",
+    "category": "",
+    "price": "",
+    "color": "",
+    "size": "",
+    "gender": "",
+    "img1": "default-image.png"
+  },
+  {
+    "id": 6,
+    "name": "Test4",
+    "description": "Running (sin Multer)",
+    "category": "",
+    "price": "",
+    "color": "",
+    "size": "",
+    "gender": "",
+    "img1": "default-image.png"
+  }
 ]

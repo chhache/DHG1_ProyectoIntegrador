@@ -9,34 +9,56 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 // }
 
 const productsController ={
-    index: function(req,res){
+    index: (req,res) => {
 		// res.send(products);
-        res.render('products');
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('products', {productos: products });
     },
 
     detail: (req,res) => {
         let idProducto = req.params.id //id se refiere al :id
-        const productosMostrar = products.find(el => el.id == idProducto); 
-        res.render('products/detail', {productos: productosMostrar});
+		//res.send(req.params.id);
+        const productoMostrar = products.find(el => el.id == idProducto); 
+		//res.send({productos: productosMostrar});
+        res.render('products/detail', {productos: productoMostrar});
     },
 
-	 create: function(req,res){
-        res.render('admin/createForm');
+	create: (req,res) => {
+		//res.send('se ejecuto el controlador por GET');
+		res.render('admin/createForm');
     },
+
 	// Create method to store
 	store: (req, res) => {
+		//res.send('se ejecuto el controlador que guarda JSON') // Validación del Form
+		//res.json(req.body);
+		//return res.json(req.file);
 		//accedes al id del ultimo elemento (0 no existiria) y le sumas 1 para los nuevos productos
-		let newId = products[products.length-1].id + 1; 
+		let newID = products[products.length-1].id + 1; 
 		let newProduct = {
-			id: newId,
-			...req.body,   //Spred operator, si hay OL toma c propiedad y valor.. y los SEPARA.
-			img1: "default-image.png"	
+		//id: newId,
+		//...req.body,   //Spred operator, si hay OL toma c propiedad y valor.. y los SEPARA.
+		//img1: "default-image.png"	
 			//img1: req.file == undefined ? "default-image.png" : req.file.filename // Debe haber si no no se muestra nada.
-		};  
+		//};  
+			id:newID,
+			// name: req.body.name,
+			// description: req.body.description,
+			// price: req.body.price,
+			// color: req.body.color,
+			// size: req.body.size,
+			// category: req.body.category,
+			// discount: req.body.discount,
+			// stock: req.body.stock,
+			// gender: req.body.gender,
+			...req.body,
+			img1: req.file == undefined ? 'default-image.png': req.file.filename // if ternario 
+		}	
 		products.push(newProduct);
 		let productsJSON = JSON.stringify(products, null, 2); //para que no quede todo en una linea.
 		fs.writeFileSync(productsFilePath, productsJSON);
-		res.redirect("/products");
+		//res.redirect("/products"); // falta view productList.ejs
+		res.redirect("/");
 	},
 
     productCart: function (req,res){

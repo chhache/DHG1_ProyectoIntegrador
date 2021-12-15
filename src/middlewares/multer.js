@@ -1,5 +1,5 @@
-const multer = require('multer')
-const path = require('path')
+const multer = require('multer');
+const path = require('path');
 
 const Folderpath = multer({dest: path.resolve(__dirname,'../../public/images')})
 
@@ -15,4 +15,4 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage: storage })
 
-  module.export = upload
+  module.exports = upload;

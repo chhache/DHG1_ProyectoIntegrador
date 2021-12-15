@@ -16,7 +16,7 @@
             <div class="container-flex">
                 <div class="main-header__container"> 
                   <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
-                  <h1>Modificar prodcuto</h1>      
+                  <h1>Editar producto</h1>      
                 </div>
             </div>            
         </div> 
@@ -27,7 +27,7 @@
                     <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
                         <input type="text" placeholder="Nombre del producto" name="name" required value="<%= productToEdit.name %>"  > 
                         <input type="text" placeholder="Descripción" name="description" required value="<%= productToEdit.description %>" >
-                        <input type="image" placeholder="" name="img1"  value="<%= productToEdit.img1 %>" >
+                        <input type="image" name="img1"  value="<%= productToEdit.img1 %>" >
                         <input type="text" placeholder="Categoria" name="category" value="<%= productToEdit.category %>" >                        
                     <!-- </form>
             </div>            
