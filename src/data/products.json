@@ -1,63 +1,33 @@
 [
   {
-    "id": 0,
+    "id": "0",
     "name": "Adidas Runner 2020",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
-    "color": "Blanco",
-    "size": 42,
+    "description": "Runining y Trecking",
     "category": "Zapatillas",
-    "stock": 3,
+    "price": "65.5",
+    "color": "Blanco",
+    "size": "42",
     "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "img1": "demo-product-1.jpg"
   },
   {
     "id": "1",
-    "name": "Adidas Runner 2022",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
-    "color": "Blanco",
-    "size": 42,
-    "category": "Zaptillas",
-    "stock": 3,
-    "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "img1": "demo-product-1.jpg"
   },
   {
-    "id": 2,
-    "name": "Adidas Runner 2022",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
-    "color": "Blanco",
-    "size": 42,
-    "category": "Zaptillas",
-    "stock": 3,
-    "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "id": "2",
+    "img1": "demo-product-1.jpg"
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Adidas Runner 2022",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
+    "description": "Editadísimo por 3 vez",
+    "category": "Zapas",
+    "price": "65.5",
     "color": "Blanco",
-    "size": 42,
-    "category": "Zaptillas",
-    "stock": 3,
+    "size": "42",
     "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "img1": "demo-product-1.jpg"
   },
   {
     "id": 4,
@@ -94,6 +64,61 @@
     "color": "",
     "size": "",
     "gender": "",
+    "img1": "default-image.png"
+  },
+  {
+    "id": 7,
+    "name": "Rebook",
+    "description": "Runner 2022",
+    "category": "Zapatillas",
+    "price": "10000",
+    "color": "Blanco",
+    "size": "42",
+    "gender": "Unisex",
+    "img1": "default-image.png"
+  },
+  {
+    "id": 8,
+    "name": "Adidas 2021",
+    "description": "Editado",
+    "category": "Zapatillas",
+    "price": "12345",
+    "color": "Blanco",
+    "size": "38",
+    "gender": "Unisex",
+    "img1": "default-image.png"
+  },
+  {
+    "id": 9,
+    "name": "Under Armor",
+    "description": "Runing 2023",
+    "category": "Zapatillas",
+    "price": "12560",
+    "color": "Naranja",
+    "size": "43",
+    "gender": "Unisex",
+    "img1": "default-image.png"
+  },
+  {
+    "id": 10,
+    "name": "test 45",
+    "description": "",
+    "category": "",
+    "price": "",
+    "color": "",
+    "size": "",
+    "gender": "",
+    "img1": "default-image.png"
+  },
+  {
+    "id": 11,
+    "name": "Reebok",
+    "description": "Trecking 2023",
+    "category": "Zapatillas",
+    "price": "123400",
+    "color": "Amarillo",
+    "size": "43",
+    "gender": "Unisex",
     "img1": "default-image.png"
   }
 ]
