@@ -1,9 +1,25 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multer');
+const path = require("path");
 
 // ***************** Controller Require *******************
 const productsController = require('../controllers/productsController');
+
+const multer = require('multer'); // Para el file del form. + enctype + storage + uploadFile
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb){
+        cb(null,'./public/images/users')
+    },
+    filename: function(req, file, cb){
+        let fileName = `${Date.now()}_img${path.extname(file.originalname)}`
+        cb(null, fileName);
+    }
+})
+
+const uploadFile = multer({storage: storage});
+
 
 // CTRL + CLICK DERECHO... -> Se debe tipear en la URL /products ANTES~!
 
@@ -14,7 +30,7 @@ router.get('/',productsController.index)         // 1. /products (GET) Listado d
 // /*** CREATE ONE PRODUCT ***/
 router.get('/create', productsController.create);   // 2. /products/create (GET) Formulario de creación de productos. (OK)
 //router.post('/', upload.single('img1'), productsController.store); // 4. /products (POST) Acción de creación (a donde se envía el formulario). (OK)
-router.post('/', upload.single('image'), productsController.store); // -> Usar con Multer
+router.post('/', uploadFile.single('img1'), productsController.store); // -> Usar con Multer
  
 
 /*** GET ONE PRODUCT ***/ 

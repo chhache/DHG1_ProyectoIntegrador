@@ -95,5 +95,16 @@
     "size": "",
     "gender": "",
     "img1": "default-image.png"
+  },
+  {
+    "id": 7,
+    "name": "Santiago ",
+    "description": "Probando",
+    "category": "Prueba",
+    "price": "999999",
+    "color": "Prueba",
+    "size": "Prueba",
+    "gender": "Prueba",
+    "img1": "1639716389614_img.png"
   }
 ]
