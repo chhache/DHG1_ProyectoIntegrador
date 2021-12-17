@@ -1,63 +1,33 @@
 [
   {
-    "id": 0,
+    "id": "0",
     "name": "Adidas Runner 2020",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
-    "color": "Blanco",
-    "size": 42,
+    "description": "Runining y Trecking",
     "category": "Zapatillas",
-    "stock": 3,
+    "price": "65.5",
+    "color": "Blanco",
+    "size": "42",
     "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "img1": "demo-product-1.jpg"
   },
   {
     "id": "1",
-    "name": "Adidas Runner 2022",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
-    "color": "Blanco",
-    "size": 42,
-    "category": "Zaptillas",
-    "stock": 3,
-    "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "img1": "demo-product-1.jpg"
   },
   {
-    "id": 2,
-    "name": "Adidas Runner 2022",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
-    "color": "Blanco",
-    "size": 42,
-    "category": "Zaptillas",
-    "stock": 3,
-    "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "id": "2",
+    "img1": "demo-product-1.jpg"
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Adidas Runner 2022",
-    "description": "Entrada Carpaccio de salmón con cítricos",
-    "price": 65.5,
+    "description": "Editadísimo por 3 vez",
+    "category": "Zapas",
+    "price": "65.5",
     "color": "Blanco",
-    "size": 42,
-    "category": "Zaptillas",
-    "stock": 3,
+    "size": "42",
     "gender": "Unisex",
-    "img1": "demo-product-1.jpg",
-    "img2": "demo-product-2.jpg",
-    "img3": "demo-product-3.jpg",
-    "img4": "demo-product-4.jpg"
+    "img1": "demo-product-1.jpg"
   },
   {
     "id": 4,

@@ -15,7 +15,7 @@
     <div class="container">
         <div class="login-container">
             <div class="register-1">
-                    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
+                    <form action="../<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <input type="text" placeholder="Nombre del producto" name="name" required value="<%= productToEdit.name %>"  > 
                         <input type="text" placeholder="Descripción" name="description" required value="<%= productToEdit.description %>" >
                         <input type="image" name="img1"  value="<%= productToEdit.img1 %>" >

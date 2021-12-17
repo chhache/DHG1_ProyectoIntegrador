@@ -55,8 +55,8 @@
                  <button class="btn primary-btn">Comprar</button>
                  <button class="btn secondary-btn">Agregar al carrito</button>
                  <br><br>
-                 <a href="/products/edit/<%= productos.id %>" class="btn primary-btn">Editar producto</a>
-			    <form action="/products/delete/<%= productos.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                 <a href="/products/edit/<%= productos.id %>" enctype="multipart/form-data" class="btn primary-btn">Editar producto</a>             
+                 <form action="/products/<%= productos.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
 				    <button type="submit" class="btn secondary-btn">Eliminar producto     </button>
 			    </form>
              </div>

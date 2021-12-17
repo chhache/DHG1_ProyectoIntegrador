@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="images/logo-dCompras-01.svg" alt="Logo dCompras"></a>       
+                </div>                               
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register-1">
+                <!-- <h2>Registrarse</h2> -->
+                    <form action="" method="POST">
+                        <input type="text" placeholder="Nombre y Apellido (*)" class="nombre" required  > 
+                        <!-- <input type="text" placeholder="Prueba Contraseña" id="referencia" name="referencia" required pattern="[A-Z]{3}[0-9]{4}"
+title="El formato debe coincidir con 3 letras mayúsculas, 4 números."> -->
+                        <input type="text" placeholder="Usuario ó Correo (*)" class="user" required>
+                        <input type="password" placeholder="Contraseña (*)" class="pass" required pattern="[A-Z]{3}[0-9]{4}"
+                        title="El formato debe coincidir con 3 letras mayúsculas, 4 números.">
+                        <input type="password" placeholder="Confirmar contraseña (*)" class="repass" required pattern="[A-Z]{3}[0-9]{4}"
+                        title="El formato debe coincidir con 3 letras mayúsculas, 4 números.">                        
+                        <!-- <input type="number" placeholder="Teléfono" class="tel">                    -->
+                        
+                    </form>
+            </div>            
+            <div class="register-2">
+                <!-- <h2>Iniciar Sesión</h2> -->
+                <!-- <h3>Acceder con ...</h3> -->
+                <form action="">
+                    <input type="text" placeholder="Dirección (calle)" class="direccion"> 
+                    <input type="text" placeholder="Código Postal" class="cp">
+                    <input type="password" placeholder="Ciudad" class="ciudad">
+                    <input type="password" placeholder="Provincia" class="provincia">                                      
+                    <input type="date" placeholder="Fecha de Nacimiento" class="birthday">                    
+                    <input type="submit" class="submit" value="REGISTRARSE">
+                    <!-- <input type="file" placeholder="Subir archivo" class="file"> -->
+                </form>
+            </div>    
+        </div>         
+    </div>
+</body>
+</html>
