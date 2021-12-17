@@ -31,7 +31,6 @@ router.get('/',productsController.index)         // 1. /products (GET) Listado d
 router.get('/create', productsController.create);   // 2. /products/create (GET) Formulario de creación de productos. (OK)
 //router.post('/', upload.single('img1'), productsController.store); // 4. /products (POST) Acción de creación (a donde se envía el formulario). (OK)
 router.post('/', uploadFile.single('img1'), productsController.store); // -> Usar con Multer
- 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/:id', productsController.detail);   // 3. /products/:id (GET) Detalle de un producto particular. OK, queda maquillar.
