@@ -8,26 +8,52 @@
     "color": "Blanco",
     "size": "42",
     "gender": "Unisex",
-    "img1": "demo-product-1.jpg"
+    "img1": "demo-product-1.jpg",
+    "img2": "demo-product-2.jpg",
+    "img3": "demo-product-3.jpg",
+    "img4": "demo-product-4.jpg"
   },
   {
     "id": "1",
-    "img1": "demo-product-1.jpg"
-  },
-  {
-    "id": "2",
-    "img1": "demo-product-1.jpg"
-  },
-  {
-    "id": "3",
-    "name": "Adidas Runner 2022",
-    "description": "Editadísimo por 3 vez",
-    "category": "Zapas",
+    "name": "Adidas Training 2018",
+    "description": "Training ",
+    "category": "Zapatillas",
     "price": "65.5",
     "color": "Blanco",
     "size": "42",
     "gender": "Unisex",
-    "img1": "demo-product-1.jpg"
+    "img1": "demo-product-1.jpg",
+    "img2": "demo-product-2.jpg",
+    "img3": "demo-product-3.jpg",
+    "img4": "demo-product-4.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Rebook Crossfit 2019",
+    "description": "Crossfit training",
+    "category": "Zapatillas",
+    "price": "65.5",
+    "color": "Blanco",
+    "size": "42",
+    "gender": "Unisex",
+    "img1": "demo-product-1.jpg",
+    "img2": "demo-product-2.jpg",
+    "img3": "demo-product-3.jpg",
+    "img4": "demo-product-4.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Topper 2022",
+    "description": "Gracias, paso",
+    "category": "Zapatillas",
+    "price": "65.5",
+    "color": "Blanco",
+    "size": "42",
+    "gender": "Unisex",
+    "img1": "demo-product-1.jpg",
+    "img2": "demo-product-2.jpg",
+    "img3": "demo-product-3.jpg",
+    "img4": "demo-product-4.jpg"
   },
   {
     "id": 4,
@@ -76,5 +102,16 @@
     "size": "Prueba",
     "gender": "Prueba",
     "img1": "1639716389614_img.png"
+  },
+  {
+    "id": 8,
+    "name": "All Stars",
+    "description": "Informal",
+    "category": "Zapatillas Lona",
+    "price": "12680",
+    "color": "Negro",
+    "size": "42",
+    "gender": "Unisex",
+    "img1": "1639769004591_img.jpg"
   }
 ]

@@ -18,8 +18,6 @@ app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en po
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
-//app.use('/product', productsRoutes);
-//app.use('/createForm', productsRoutes);
 
 module.exports = app;
 

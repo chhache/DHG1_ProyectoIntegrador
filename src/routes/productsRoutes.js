@@ -20,31 +20,25 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage: storage});
 
+/*** Listado de prodcutos ***/
+router.get('/',productsController.index)         // 1. /products (GET) Listado de productos. OK, queda maquillar   
 
-// CTRL + CLICK DERECHO... -> Se debe tipear en la URL /products ANTES~!
+/*** Creación de prodcuto ***/
+router.get('/create', productsController.create);   // 2. /products/create (GET) Formulario de creación de producto
+router.post('/', uploadFile.single('img1'), productsController.store); // -> Usar con Multer // 4. /products (POST) Acción de creación (a donde se envía el formulario)
 
-/*** GET ALL PRODUCTS ***/ 
-//router.get('/productsList', productsController.index);  
-router.get('/',productsController.index)         // 1. /products (GET) Listado de productos. OK, queda maquillar. (OK)   
-
-// /*** CREATE ONE PRODUCT ***/
-router.get('/create', productsController.create);   // 2. /products/create (GET) Formulario de creación de productos. (OK)
-//router.post('/', upload.single('img1'), productsController.store); // 4. /products (POST) Acción de creación (a donde se envía el formulario). (OK)
-router.post('/', uploadFile.single('img1'), productsController.store); // -> Usar con Multer
-
-/*** GET ONE PRODUCT ***/ 
+/*** Detalle de un producto particular ***/ 
 router.get('/:id', productsController.detail);   // 3. /products/:id (GET) Detalle de un producto particular. OK, queda maquillar.
 
-/*** EDIT ONE PRODUCT ***/
+/*** Edición de un prodcuto ***/
 router.get('/edit/:id', productsController.edit);       // 5. /products/edit/:id (GET) Formulario de edición de productos. OK, queda maquillar.
-router.put('/:id', upload.single('img1'), productsController.update);          // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario). !FALTA!   
+router.put('/:id', uploadFile.single('img1'), productsController.update);          // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario). !FALTA!   
        
-/*** BUY ONE PRoDUCT ***/
-router.get('/productsCart', productsController.productCart);  // [No se muestra como corresponde.] 
+/*** Comprar un prodcuto ***/
+router.get('/productsCart', productsController.productCart);  // No se muestra como corresponde -> pendiente a revisar
 
-/*** DELETE ONE PRODUCT***/ 
-router.delete('/:id', productsController.destroy);    // 7. /products/:id (DELETE) Acción de borrado. !FALTA!
-
+/*** Eliminar un prodcuto ***/ 
+router.delete('/:id', productsController.destroy);    // 7. /products/:id (DELETE) Acción de borrado. 
 
 module.exports = router;
 

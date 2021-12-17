@@ -3,10 +3,6 @@ const fs = require('fs');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-// const listadoProductos = function () {
-//     let listadoJson = fs.readFileSync(path.resolve(__dirname, '../data/products.json'),'utf-8');
-//     return JSON.parse(listadoJson)
-// }
 
 const productsController = {
     index: (req,res) => {

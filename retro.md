@@ -60,6 +60,23 @@ Less Of:
 
 
 - Sprint 4 (15.12.2021)
+Keep doing:
+Entregas en término.
+Delegación de tareas segun afinidad.
+Ordenar propuestas y updates en  weekly standups -> weekly.md  
+
+More of:
+Asignación de tareas al principio del Sprint.
+Code review.
+
+Start Doing:
+Estandarización de código y revisión.
+Debatir mejoras en gral (Código / Diseño / etc)
+
+Stop Doing:
+Malas prácticas en Git Hub, genera retrasos
+
+Less Of:
 
 
 Integrantes:
