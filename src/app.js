@@ -3,7 +3,9 @@ const app = express();
 const port = 3031
 const path = require('path');
 const mainRoutes = require('./routes/mainRoutes');
-const productsRoutes = require("./routes/productsRoutes")
+const productsRoutes = require("./routes/productsRoutes");
+const usersRoutes = require ('./routes/usersRoutes')
+
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 //Servicio de archivos estáticos (img, CSS y JS) se utiliza el middelware nativo express.static
@@ -18,6 +20,7 @@ app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en po
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
+app.use('/users', usersRoutes);
 
 module.exports = app;
 

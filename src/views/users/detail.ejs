@@ -1,0 +1,14 @@
+<body>
+<h2>Esta es la pagina de detalle de usuarios </h2>
+
+<div class="user">
+    <% for (let i =0; i< users.length; i++){ %> 
+        <article>
+            <p class="name"> <%= users[i].firstName %></p>
+            <p class="lastName"><%= users[i].lastName %></p>
+            <h4 class="email"> <%= users[i].email %></h4>
+        </article>                              
+
+        <%} %>        
+</div>
+</body>
