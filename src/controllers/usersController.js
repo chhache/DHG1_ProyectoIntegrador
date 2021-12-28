@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const bcryptjs = require('bcryptjs');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -8,15 +9,42 @@ const usersController = {
 
     index: (req,res) => {
 		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        res.render('users/detail', {users: users});
+		//res.send(users);
+        res.render('users/users', {users: users});
     },
-
     detail: (req,res) => {
         let idUser = req.params.id 
 		const userMostrar = users.find(el => el.id == idUser); 
         res.send({users: userMostrar})
 		res.render('users/detail', {users: userMostrar});
-    }
+    },
+	login: (req,res) => {
+        res.render('users/login')
+    },
+	register: function (req,res){
+        res.render('users/register')
+    },
+	// Store User 
+	processRegister: (req, res) => {
+		//res.send('se ejecuto el controlador que guarda JSON') // Validación del Form
+		//res.json(req.body);
+		//return res.json(req.file);
+		//accedes al id del ultimo elemento (0 no existiria) y le sumas 1 para los nuevos productos
+		let newID = users[users.length-1].id + 1; 
+		let newUser = {						
+			id:newID,			
+			...req.body, //Spred operator, si hay OL toma c propiedad y valor.. y los SEPARA.
+			password: bcryptjs.hashSync(req.body.password, 10),
+			image: req.file == undefined ? 'image_user_default.png': req.file.filename // if ternario 
+		}	
+		users.push(newUser);
+		let usersJSON = JSON.stringify(users, null, 2); //para que no quede todo en una linea.
+		fs.writeFileSync(usersFilePath, usersJSON);		
+		res.redirect("/users/login");
+	},
+	redirect:function(req,res){
+        res.redirect('index')
+    } 
 /*
 	create: (req,res) => {
 		//res.send('se ejecuto el controlador por GET');

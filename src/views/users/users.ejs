@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %> 
+    <h2 class="main-nav">Usuarios</h2>
+        <main class="main">
+            <div class="container">                
+                <!-- <h2 class="main-title">Artículos </h2> -->
+                    <section class="container-products">
+                        <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
+                          
+                        <!-- <div class="product"> -->
+                        <div>    
+                            <% for (let i = 0; i < users.length; i++) { %>
+                            <a href="/users/<%= users[i].id %>" rel="noopener noreferrer">   
+                                <article>
+                                     <img src="/images/users/<%= users[i].image %>" alt="Usuario" >
+                                        <!-- <div class="main-article"> -->
+                                            <!-- <i class="fas fa-truck"></i> -->
+                                            <p><%= users[i].firstName %></p>
+                                            <p><%= users[i].lasName %></p>
+                                            <h4><%= users[i].email %></h4>
+                                        <!-- </div> -->
+                                </article>                                                            
+                            </a>
+                            <% } %>                                
+                        </div>                               
+                    </section>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>                
+    </body>
+</html>

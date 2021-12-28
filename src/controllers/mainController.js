@@ -9,13 +9,13 @@ const mainController = {
         res.render('index', {producto: products})
     },
 
-    register: function (req,res){
-        res.render('users/register')
-    },
+    // register: function (req,res){
+    //     res.render('users/register')
+    // },
 
-    login:function (req,res){
-        res.render('users/login')
-    },
+    // login:function (req,res){
+    //     res.render('users/login')
+    // },
     
     redirect:function(req,res){
         res.redirect('index')

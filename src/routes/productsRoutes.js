@@ -20,17 +20,17 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage: storage});
 
-/*** Listado de prodcutos ***/
+/*** Listado de producto ***/
 router.get('/',productsController.index)         // 1. /products (GET) Listado de productos. OK, queda maquillar   
 
-/*** Creación de prodcuto ***/
+/*** Creación de producto ***/
 router.get('/create', productsController.create);   // 2. /products/create (GET) Formulario de creación de producto
 router.post('/', uploadFile.single('img1'), productsController.store); // -> Usar con Multer // 4. /products (POST) Acción de creación (a donde se envía el formulario)
 
 /*** Detalle de un producto particular ***/ 
 router.get('/:id', productsController.detail);   // 3. /products/:id (GET) Detalle de un producto particular. OK, queda maquillar.
 
-/*** Edición de un prodcuto ***/
+/*** Edición de un producto ***/
 router.get('/edit/:id', productsController.edit);       // 5. /products/edit/:id (GET) Formulario de edición de productos. OK, queda maquillar.
 router.put('/:id', uploadFile.single('img1'), productsController.update);          // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario). !FALTA!   
        
