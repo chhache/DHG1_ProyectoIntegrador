@@ -30,3 +30,15 @@ Los pendientes continuan acumulandose, levantamos algunos pero falta focalizar m
 - Que va a hacer hoy:
 Revisión código Multer (problema de rutas  ./images || ./mages/user
 Continuar con revisión de links -> Carrito, Form registro, link de prodcutos etc
+
+Sprint 5
+- Qué hizo ayer:
+Completar entregables
+Punt 5 y 6 completos (Registro de usuarios | Login usuarios)
+
+
+- Si se encontró con algún impedimento:
+Falta de tiempo
+Revisar estilos en detalles y definir nuevas clases para los formularios de Login, registro y otros.
+
+- Que va a hacer hoy:
