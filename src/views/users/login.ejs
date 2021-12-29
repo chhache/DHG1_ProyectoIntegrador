@@ -14,10 +14,14 @@
     <div class="container">
         <div class="login-container">
             <div class="register">
-                <h2>Iniciar Sesión</h2>
-                    <form action="/">
-                        <input type="text" placeholder="Mail" class="usuario"> 
-                        <input type="password" placeholder="Contraseña" class="pass">
+                <h2>Iniciar Sesión | Login </h2>
+                    <form method="POST" action="/users/login">
+                        <input type="text" placeholder="Correo Electrónico" class="usuario" name="email">
+                        <% if (locals.errors && errors.email) { %>
+                            <%= errors.email.msg %>                            
+                        <% } %> 
+                        <input type="password" placeholder="Contraseña" class="pass" name="password">
+                        <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario        
                         <!-- ]<input type="password" placeholder="Confirmar contraseña" class="repass"> -->
                         <input type="submit" class="submit" value="INGRESAR">
                         <a href="#"> ¿Olvidaste la contraseña?</a>

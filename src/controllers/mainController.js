@@ -17,14 +17,9 @@ const mainController = {
     //     res.render('users/login')
     // },
     
-    redirect:function(req,res){
+    redirect: (req,res) => {
         res.redirect('index')
     },    
 }
-//Funcion para transofmar el archivo JSON 
-// const listadoProductos = function () {
-//     let listadoJson = fs.readFileSync(path.resolve(__dirname, '../data/products.json'),'utf-8');
-//     return JSON.parse(listadoJson)
-//   }
 
 module.exports = mainController

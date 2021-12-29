@@ -26,6 +26,22 @@
                 <li class="menu__item"><a href="#" class="menu__link">Ofertas</a></li>
                 <li class="menu__item"><a href="/products/create" class="menu__link">Crear producto</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Ayuda</a></li>
+                <% if (locals.isLogged) { %>
+					<li>
+						<a href="#" id="dropUser" role="button">
+							<img src="/images/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
+							Hi <%= locals.userLogged.firstName %> 
+						</a>
+						<ul>
+							<a href="/users/profile">Perfil</a>
+							<li><hr></li>
+							<a href="/users/logout">Salir</a>
+						</ul>
+					</li>
+				<% } else { %>
+					<li><a href="/users/register">Registrarse</a></li>
+					<li><a href="/users/login">Loguearse</a></li>
+				<% } %>
                 <!-- <li class="menu__item"><a href="" class="menu__link">Contacto</a></li> -->
             </ul>
         </nav>

@@ -19,16 +19,30 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage: storage});
 
-/*** Registro de usuarios ***/
-router.get('/users',usersController.index) // 1. /products (GET) Listado de productos. OK, queda maquillar 
+// Middlewares
+// const uploadFile = require('../middlewares/multerMiddleware');
+const validations = require('../middlewares/validateRegisterMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-
-router.get('/login', usersController.login );        //Funciona.
-router.post('/login', usersController.redirect);     //Funciona. Aparece un ? luego de apretar el boton.
+/***Listado de usuarios ***/
+router.get('/users', usersController.index) // Listado de usuarios (restaría mejorar la vista/estilos) 
 
 /*** Formulario registro usuario ***/
-router.get('/register', usersController.register );  //Funciona.
+router.get('/register', guestMiddleware, usersController.register );  //Funciona.
 /*** Procesar el registro usuario ***/
 router.post('/register', uploadFile.single('image'), usersController.processRegister);  //Funciona. Aparece un ? luego de apretar el boton.
-        
+
+/*** Formulario login usuario ***/
+router.get('/login', guestMiddleware,usersController.login ); //Funciona.
+/*** Procesar el login***/
+router.post('/login', usersController.loginProcess);
+//router.post('/login', usersController.redirect);     //Funciona. Aparece un ? luego de apretar el boton.
+
+// Perfil de Usuario
+router.get('/profile', authMiddleware, usersController.profile);
+
+// Logout
+router.get('/logout', usersController.logout);
+
 module.exports = router
