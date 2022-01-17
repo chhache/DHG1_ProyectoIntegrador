@@ -12,58 +12,26 @@
             <section class="container-products">
                 <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
             <div class="product">
-             
-              <div class="card-product">
-                <a href="/products/1" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
-                <img src="images/demo-product-4.jpg" alt="" class="product__img">
-                <div class="product__description">
-                    <h3 class="product__title">Adidas Runner 2015</h3>
-                    <span class="product__price">$16.500</span>
-                </div>
-                </a>      
-                <a href="/products/productCart" rel="noopener noreferrer">
+                <% for (let i =0; i< producto.length; i++){ %>
+                    <div class="card-product">
+                    <a href="/products/<%= producto[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
+                        <article>
+                           
+                             <img src="/images/<%= producto[i].img1 %>" alt="Zapatillas" >
+                                <div class="main-article">
+                                    <i class="fas fa-truck"></i>
+                                    <p class="price">$<%= producto[i].price %></p>
+                                    <p class="discount"><%= producto[i].discount %></p>
+                                    <h4 class="name"> <%= producto[i].name %></h4>
+                                </div>
+                            </article>  
+                        </a>
+                    <a href="/productCart" rel="noopener noreferrer">
                     <i class="product__icon fas fa-cart-plus"></i>
-                </a>  
-               </div>  
-               
-               <div class="card-product">
-                <a href="/products/1" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
-                <img src="images/demo-product-4.jpg" alt="" class="product__img">
-                <div class="product__description">
-                    <h3 class="product__title">Adidas Runner 2015</h3>
-                    <span class="product__price">$16.500</span>
-                </div>
-                </a>      
-                <a href="/products/productCart" rel="noopener noreferrer">
-                    <i class="product__icon fas fa-cart-plus"></i>
-                </a>  
-               </div>
-               
-               <div class="card-product">
-                <a href="/products/1" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
-                <img src="images/demo-product-4.jpg" alt="" class="product__img">
-                <div class="product__description">
-                    <h3 class="product__title">Adidas Runner 2015</h3>
-                    <span class="product__price">$16.500</span>
-                </div>
-                </a>      
-                <a href="/products/productCart" rel="noopener noreferrer">
-                    <i class="product__icon fas fa-cart-plus"></i>
-                </a>  
-               </div> 
-               
-               <div class="card-product">
-                <a href="/products/1" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
-                <img src="images/demo-product-4.jpg" alt="" class="product__img">
-                <div class="product__description">
-                    <h3 class="product__title">Adidas Runner 2015</h3>
-                    <span class="product__price">$16.500</span>
-                </div>
-                </a>      
-                <a href="/products/productCart" rel="noopener noreferrer">
-                    <i class="product__icon fas fa-cart-plus"></i>
-                </a>  
-               </div>      
+                    </a>
+                   </div>
+                    <% } %>   
+                  
               
             </div>            
         </section>

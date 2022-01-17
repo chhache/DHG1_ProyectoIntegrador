@@ -45,11 +45,12 @@
 .register input:focus{
     outline: none;
 }
-.register .submit{
+.register .submit,
+.register-1 .submit{
     width: 100%;
     padding: 8px;
     margin-bottom: 25px;
-    /* background-color: #f17108; */
+    border: 0;
     background-color: #12af9a;
     color: #fff;
     font-size: 16px;
