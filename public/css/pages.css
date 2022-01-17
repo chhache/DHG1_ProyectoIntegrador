@@ -1,21 +1,32 @@
 /*======  INDEX PAGE ====== */
 
 .container-products{
-    display: grid;
-    /* definimos la propiedad para que este en 2 col y ocupen el mismo espacio */
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 } 
 .product{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card-product {
     position: relative;
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
     background: white;
+    margin: 12px;
+    width: 100%;
 }
-.product:before{
+
+.product a:before{
     /* content: new -> agrega texto con pseudo elementos | Label en los productos*/
-        color: #fff;
+    color: #fff;
     content: "New";
     background-color: #FF4e00;
     padding: 5px;
@@ -308,7 +319,9 @@ section.productCart {
 .product-info .img-product {
     display: none;
 }
-  
+.card-product {
+   width: 250px;
+}
 /*Cart detail*/
 
 .cart-container {

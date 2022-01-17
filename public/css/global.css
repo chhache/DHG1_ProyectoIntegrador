@@ -76,6 +76,12 @@ ul {
     font-size:14px
 }
 
+/*Titulares*/
+.main-title {
+    margin-top:25px;
+    margin-bottom:25px
+}
+
 /*HEADER----- */
 
 .main-header{
@@ -213,7 +219,7 @@ footer i{
 @media screen and (min-width: 1024px){
     .container{
         /* Limitar contenido del Header */
-        width: 1010px;
+        width: 90%;
         margin: auto;
     }
     .icon-menu,
@@ -270,7 +276,8 @@ footer i{
         opacity: 1;
         visibility: visible;
         width: 100%; 
-        margin-top: 20px;       
+        margin-top: 20px; 
+        background-color: #12af9a;      
     }
     .menu{
         position: static;
@@ -301,7 +308,7 @@ footer i{
 }
 @media screen and (min-width: 1080px){
     .container{
-        width: 1010px;
+        width: 90%;
         margin: auto;
     }
     .main-header__container:nth-child(2){

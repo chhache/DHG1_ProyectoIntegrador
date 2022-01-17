@@ -3,15 +3,17 @@
     <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %> 
-    <h2 class="main-nav">Todos los productos</h2>
+   
         <main class="main">
-            <div class="container">                
+            <div class="container">  
+                <h2 class="main-title">Todos los productos</h2>              
                 <!-- <h2 class="main-title">Artículos </h2> -->
                     <section class="container-products">
                         <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
                           
                         <div class="product">
                             <% for (let i =0; i< productos.length; i++){ %>
+                            <div class="card-product">
                             <a href="/products/<%= productos[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
                                 <article>
                                      <!-- <img src="/images/users/<%= productos[i].img1 %>" alt="Zapatillas" > -->
@@ -27,6 +29,7 @@
                             <a href="/productCart" rel="noopener noreferrer">
                             <i class="product__icon fas fa-cart-plus"></i>
                             </a>
+                           </div>
                             <% } %>                                
                         </div>                               
                     </section>
