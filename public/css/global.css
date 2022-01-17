@@ -82,6 +82,14 @@ ul {
     margin-bottom:25px
 }
 
+/*avatar */
+
+#dropUser img {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
 /*HEADER----- */
 
 .main-header{
