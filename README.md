@@ -12,6 +12,8 @@ Integrantes:
     > Santiago Pasquini
     > Lucas Comandé 
     > Emanuel Chamorro
+    > Sol Cattaneo
+
 
 Sitios web de refencia:
 1- https://www.adidas.com.ar/

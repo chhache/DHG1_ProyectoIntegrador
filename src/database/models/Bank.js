@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Genre';                                // Definir la var alias de la tabla
+    let alias = 'Bank';                                // Definir la var alias de la tabla
     let cols = {                                        // Definir las columnas de la tabla 
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -14,22 +14,28 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        //tableName: 'genres',
+        //tableName: 'banks',
         timestamps: false
         
     }
-    const Genre = sequelize.define(alias,cols,config);
+    const Bank = sequelize.define(alias,cols,config);
 
     // Definir las relaciones
     // products N:1
     
-    Genre.associate = function (models) {            // asociarse a genres (modelo -> genre)
+    Bank.associate = function (models) {            // asociarse a genres (modelo -> genre)
         
-        Genre.hasMany(models.Product, {              // llama al modelo Product
-            as: "product",                           // alias de la relacion -> N:1                                             
-            foreignKey: 'id_genre',                  // PK en modelo Product   
+        Bank.hasMany(models.CreditCard, {           // llama al modelo CartDetail 
+            as: "creditCard",                       // alias de la relacion -> 1:N                                             
+            foreignKey: 'id_bank',                  // PK en modelo creditCart   
             timestamps: false
         })
     }
-    return Genre;
+    return Bank;
 };
+
+
+
+
+
+

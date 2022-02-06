@@ -79,8 +79,34 @@ Malas prácticas en Git Hub, genera retrasos
 Less Of:
 
 
+- Sprint 6 (05.02.2022)
+Keep doing:
+Entregas en término.
+Delegación de tareas.
+Seguimiento y comentarios actualizados por Trello.
+Ordenar propuestas y updates en  weekly standups -> weekly.md  
+
+More of:
+Asignación de tareas al principio del Sprint.
+Cumplimiento en términos para evitar demoras.
+Evitar retrabajos innecesario por descoordinaciones
+Code review del equipo completo para entendimiento.
+Propuestas de mejoras (código y estilos) 
+
+Start Doing:
+Estandarización de código y revisión.
+Debatir mejoras en gral (Código / Diseño / etc)
+
+Stop Doing:
+Malas prácticas en Git Hub, genera retrasos.
+Demoras en las entregas.
+
+Less Of:
+
+
 Integrantes:
     > Christian Hache
     > Santiago Pasquini
     > Lucas Comandé
     > Emanuel Chamorro
+    > Sol Cattaneo

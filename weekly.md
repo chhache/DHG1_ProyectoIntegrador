@@ -42,3 +42,15 @@ Falta de tiempo
 Revisar estilos en detalles y definir nuevas clases para los formularios de Login, registro y otros.
 
 - Que va a hacer hoy:
+
+Sprint 6
+- Qué hizo ayer:
+Completar entregables
+Punto 1-7 completos 
+
+- Si se encontró con algún impedimento:
+Falta de tiempo y coordinación con el equipo.
+Revisar código y estilos para porpuestas de mejoras de impacto en el proyecto.
+
+- Que va a hacer hoy:
+Completar CRUD (entregable 8).
