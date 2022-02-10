@@ -113,5 +113,27 @@
     "size": "42",
     "gender": "Unisex",
     "img1": "1639769004591_img.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Zapatilla Duramo SL ",
+    "description": "Comprometete a ser más rápido una carrera a la vez. El exterior de malla y el talón de neopreno suave les dan a estas zapatillas de running adidas un look técnico y un ajuste cómodo que sujeta tu pie. Cuando estás en posición de acelerar, la mediasuela liviana Lightmotion está preparada para responder.",
+    "category": "Zapatilla",
+    "price": "11999",
+    "color": "Azul",
+    "size": "42",
+    "gender": "Unisex",
+    "img1": "1644528052458_img.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Zapatilla Duramo SL ",
+    "description": "Comprometete a ser más rápido una carrera a la vez. El exterior de malla y el talón de neopreno suave les dan a estas zapatillas de running adidas un look técnico y un ajuste cómodo que sujeta tu pie. Cuando estás en posición de acelerar, la mediasuela liviana Lightmotion está preparada para responder.",
+    "category": "Zapatilla",
+    "price": "11999",
+    "color": "Azul",
+    "size": "42",
+    "gender": "Unisex",
+    "img1": "1644528350177_img.jpg"
   }
 ]

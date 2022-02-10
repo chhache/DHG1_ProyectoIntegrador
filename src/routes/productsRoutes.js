@@ -40,5 +40,8 @@ router.get('/productsCart', productsController.productCart);  // No se muestra c
 /*** Eliminar un prodcuto ***/ 
 router.delete('/:id', productsController.destroy);    // 7. /products/:id (DELETE) Acción de borrado. 
 
+//Rutas CRUD -> Sprint 6
+
+
 module.exports = router;
 

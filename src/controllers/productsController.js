@@ -1,14 +1,27 @@
 const path = require('path');
 const fs = require('fs');
+const db = require('../database/models'); 				// Requerimos el dir donde almacenamos los modelos
+const sequelize = db.sequelize							// Requrimos sequlize
+const {Op} = require('sequelize') 						// Constante para requerir Operadores de sequelize
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+// Llamamos a los modelos creados
+const Products = db.Product;
+const Genres = db.Genre;
+const Users = db.User;
+
 const productsController = {
-    index: (req,res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        //res.send(products)
-		res.render('productsList', {productos: products});
+    'index': (req,res) => {
+		// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // //res.send(products)
+		// res.render('productsList', {productos: products});
+		db.Product.findAll()								// Buscamos todos los productos con findAll -> método de sequlize
+			.then(products =>{								// .then toma la promesa y recibe la variable products
+				//res.send(products)
+				res.render('productsList.ejs', {products})	 // Renderizamos la vista productList -> products:products (clave:valor)
+			})
     },
 
     detail: (req,res) => {
@@ -22,7 +35,12 @@ const productsController = {
 	create: (req,res) => {
 		//res.send('se ejecuto el controlador por GET');
 		res.render('admin/createForm');
-    },
+		
+	//	db.Product.create(req.body)        // Del modelo Movie, usamos el método create y recibimos .body que viaja por POST, podría armarse un objeto literal con las claves de cada campo, en este caso se llaman igual por ello podemos pasar todo el .body (name = columnas tabla origen) -> name: req.body.formularioName
+    //        .then(() => {              // Callback para redireccinar la vista
+    //            res.redirect('/products')}); // realizado lo anterior, la promesa redirije a /products
+    
+	},
 
 	// Create method to store
 	store: (req, res) => {
@@ -30,17 +48,22 @@ const productsController = {
 		//res.json(req.body);
 		//return res.json(req.file);
 		//accedes al id del ultimo elemento (0 no existiria) y le sumas 1 para los nuevos productos
-		let newID = products[products.length-1].id + 1; 
-		let newProduct = {						
-			id:newID,			
-			...req.body, //Spred operator, si hay OL toma c propiedad y valor.. y los SEPARA.
-			img1: req.file == undefined ? 'default-image.png': req.file.filename // if ternario 
-		}	
-		products.push(newProduct);
-		let productsJSON = JSON.stringify(products, null, 2); //para que no quede todo en una linea.
-		fs.writeFileSync(productsFilePath, productsJSON);
+		//let newID = products[products.length-1].id + 1; 
+		//let newProduct = {						
+		// 	id:newID,			
+		// 	...req.body, //Spred operator, si hay OL toma c propiedad y valor.. y los SEPARA.
+		// 	img1: req.file == undefined ? 'default-image.png': req.file.filename // if ternario 
+		// }	
+		// products.push(newProduct);
+		// let productsJSON = JSON.stringify(products, null, 2); //para que no quede todo en una linea.
+		// fs.writeFileSync(productsFilePath, productsJSON);
 		//res.redirect("/products"); // falta view productList.ejs
-		res.redirect("/products");
+
+		db.Product.create(req.body)        // Del modelo Movie, usamos el método create y recibimos .body que viaja por POST, podría armarse un objeto literal con las claves de cada campo, en este caso se llaman igual por ello podemos pasar todo el .body (name = columnas tabla origen) -> name: req.body.formularioName
+    	    .then(() => {              // Callback para redireccinar la vista
+				res.redirect('/products')}); // realizado lo anterior, la promesa redirije a /products
+				
+		//res.redirect("/products");
 	},
 
     productCart: function (req,res){
@@ -84,8 +107,6 @@ const productsController = {
 		res.redirect("/products");
 	}	
 };
-
-
 
 
 module.exports = productsController

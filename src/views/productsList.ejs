@@ -12,17 +12,16 @@
                         <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
                           
                         <div class="product">
-                            <% for (let i =0; i< productos.length; i++){ %>
+                            <% for (let i =0; i< products.length; i++){ %>
                             <div class="card-product">
-                            <a href="/products/<%= productos[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
-                                <article>
-                                     <!-- <img src="/images/users/<%= productos[i].img1 %>" alt="Zapatillas" > -->
-                                     <img src="/images/<%= productos[i].img1 %>" alt="Zapatillas" >
+                            <a href="/products/<%= products[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
+                                <article>                                     
+                                     <img src="/images/<%= products[i].image1 %>" alt="Zapatillas" >
                                         <div class="main-article">
                                             <i class="fas fa-truck"></i>
-                                            <p class="price">$<%= productos[i].price %></p>
-                                            <p class="discount"><%= productos[i].discount %></p>
-                                            <h4 class="name"> <%= productos[i].name %></h4>
+                                            <p class="price">$<%= products[i].price %></p>
+                                            <p class="discount"><%= products[i].discount %></p>
+                                            <h4 class="name"> <%= products[i].name %></h4>
                                         </div>
                                     </article>  
                                 </a>
