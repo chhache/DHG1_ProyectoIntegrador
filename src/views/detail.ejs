@@ -19,13 +19,13 @@
     <div class="detail-container">
         <div class="left-col">
           <div class="img-product">
-            <img src="/images/<%= productos.img1 %>" alt="product image">
-            <!-- <img src="/images/products/<%= productos.image %>" alt="product image" class="product-detail-img"> -->
+            <img src="/images/1644528052458_img.jpg" alt="product image">
+            <!-- <img src="/public/images/<%= product.image1 %>" alt="product image">             -->
           </div>
           <div class="carrousel-img" >
-            <div><img src="/images/<%= productos.img2 %>" ></div>
-            <div><img src="/images/<%= productos.img3 %>" ></div>
-            <div><img src="/images/<%= productos.img4 %>" ></div>
+            <div><img src="/images/<%= product.image2 %>" ></div>
+            <div><img src="/images/<%= product.image3 %>" ></div>
+            <div><img src="/images/<%= product.image4 %>" ></div>
           </div>
         </div>
         <div class="right-col">
@@ -36,14 +36,14 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 </a>
-               <span> | 36 vendidos</span>
+               <span>   36 vendidos</span>
             </div>
              <div class="product-info">
-                 <h2 class="product-name"><%= productos.name %></h2>
+                 <h2 class="product-name"><%= product.name %></h2>
                  <div class="img-product">
-                    <img src="images/demo-product-1.jpg" />
+                    <img src="images/<%= product.image1 %>" />
                 </div>
-                 <h3 class="product-price">$<%= productos.price %></h3>
+                 <h3 class="product-price">$<%= product.price %></h3>
                  <p class="stock">Stock disponible</p>
              </div>
              <div class="quantity-btn">
@@ -55,14 +55,14 @@
                  <button class="btn primary-btn">Comprar</button>
                  <button class="btn secondary-btn">Agregar al carrito</button>
                  <br><br>
-                 <a href="/products/edit/<%= productos.id %>" class="btn primary-btn">Editar producto</a>             
-                 <form action="/products/<%= productos.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
+                 <a href="/products/edit/<%= product.id %>" class="btn primary-btn">Editar producto</a>             
+                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
 				    <button type="submit" class="btn secondary-btn">Eliminar producto     </button>
 			    </form>
              </div>
              <div class="product-description">
                  <p>Descripción del producto</p>
-                 <p><%= productos.description %></p>
+                 <p><%= product.description %></p>
              </div>
         </div>
      </div>     

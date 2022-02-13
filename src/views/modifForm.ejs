@@ -26,8 +26,16 @@
                     <form action=""> -->
                     <input type="text" placeholder="Precio" name="price" value="<%= productToEdit.price %>" > 
                     <input type="text" placeholder="Color" name="color" value="<%= productToEdit.color %>" >
-                    <input type="text" placeholder="Talle" name="size" value="<%= productToEdit.size %>" >
-                    <input type="text" placeholder="Genero" name="gender" value="<%= productToEdit.gender %>" >
+                    <input type="text" placeholder="Talle" name="size" value="<%= productToEdit.size %>" >                                      
+                    <!-- <input type="text" placeholder="Genero" name="gender" value="<%= productToEdit.genre %>" > -->
+                    <label for="id_genre">Genero </label>
+                    <p>
+                        <select name="id_genre" id="" required>
+                            <% genres.forEach(genre => { %>
+                            <option value="<%= genre.id %>" <% if (Product.genre.id == genre.id) { %><%= 'selected' %><% }; %>><%= genre.name %></option>
+                            <% }); %>
+                        </select>
+                    </p>                     
                     <!-- <input type="submit" class="submit" value="MODIFICAR"> -->
                     <button type="submit" class="submit">MODIFICAR</button>
                     </form>

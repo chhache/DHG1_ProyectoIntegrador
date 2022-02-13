@@ -10,7 +10,7 @@ const multer = require('multer'); // Para el file del form. + enctype + storage 
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null,'./public/images/users')
+        cb(null,'./public/images')
     },
     filename: function(req, file, cb){
         let fileName = `${Date.now()}_img${path.extname(file.originalname)}`
@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage: storage});
 
 /*** Listado de producto ***/
-router.get('/',productsController.index)         // 1. /products (GET) Listado de productos. OK, queda maquillar   
+router.get('/',productsController.list)         // 1. /products (GET) Listado de productos. OK, queda maquillar   
 
 /*** Creación de producto ***/
 router.get('/create', productsController.create);   // 2. /products/create (GET) Formulario de creación de producto
