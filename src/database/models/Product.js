@@ -24,19 +24,27 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: true
         },
         image1: {
-            type: dataTypes.BLOB,
+            type: dataTypes.STRING(100),
             allowNull: true
         },
         image2: {
-            type: dataTypes.BLOB,
+            type: dataTypes.STRING(100),
             allowNull: true
         },
         image3: {
-            type: dataTypes.BLOB,
+            type: dataTypes.STRING(100),
             allowNull: true
         },
         image4: {
-            type: dataTypes.BLOB,
+            type: dataTypes.STRING(100),
+            allowNull: true
+        },
+        color: {
+            type: dataTypes.STRING(50),
+            allowNull: true
+        },   
+        size: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: true
         },
         sale: {
@@ -65,8 +73,6 @@ module.exports = (sequelize, dataTypes) => {
     // types -> 1:N
     // cart_details 1:N
     
-
-
     Product.associate = function (models) {             // asociarse a genres (modelo -> genre)
 
         Product.belongsTo(models.Genre, {               // modelo Product tiene relacion 1:N modelo Genre (definido en el alias)
@@ -74,10 +80,10 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "id_genre"                      // FK en modelo Products
         })
 
-        Product.belongsTo(models.Color, {               // modelo Product tiene relacion 1:N modelo Genre (definido en el alias)
-            as: "color",                                // alias de la relación, acceder a los datos en vista y controlador    
-            foreignKey: "id_color"                      // FK en modelo Products
-        })
+        // Product.belongsTo(models.Color, {               // modelo Product tiene relacion 1:N modelo Genre (definido en el alias)
+        //     as: "color",                                // alias de la relación, acceder a los datos en vista y controlador    
+        //     foreignKey: "id_color"                      // FK en modelo Products
+        // })
 
         Product.belongsTo(models.Category, {               // modelo Product tiene relacion 1:N modelo Genre (definido en el alias)
             as: "category",                                // alias de la relación, acceder a los datos en vista y controlador    

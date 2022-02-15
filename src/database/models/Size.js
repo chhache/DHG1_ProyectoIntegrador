@@ -20,16 +20,16 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Size = sequelize.define(alias,cols,config);
 
-    // Definir las relaciones
-    // products N:1
+    // // Definir las relaciones
+    // // products N:1
     
-    Size.associate = function (models) {            // asociarse a genres (modelo -> genre)
+    // Size.associate = function (models) {            // asociarse a genres (modelo -> genre)
         
-        Size.hasMany(models.Product, {              // llama al modelo Product
-            as: "product",                           // alias de la relacion -> N:1                                             
-            foreignKey: 'id_size',                  // PK en modelo Product   
-            timestamps: false
-        })
-    }
+    //     Size.hasMany(models.Product, {              // llama al modelo Product
+    //         as: "product",                           // alias de la relacion -> N:1                                             
+    //         foreignKey: 'id_size',                  // PK en modelo Product   
+    //         timestamps: false
+    //     })
+    // }
     return Size;
 };

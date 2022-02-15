@@ -25,8 +25,8 @@ module.exports = (sequelize, dataTypes) => {
     
     Category.associate = function (models) {            // asociarse a genres (modelo -> genre)
         
-        Category.hasMany(models.Product, {           // llama al modelo CartDetail 
-            as: "product",                           // alias de la relacion -> N:1                                             
+        Category.hasMany(models.Product, {              // llama al modelo CartDetail 
+            as: "product",                              // alias de la relacion -> N:1                                             
             foreignKey: 'id_category',                  // PK en modelo Product   
             timestamps: false
         })

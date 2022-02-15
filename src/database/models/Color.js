@@ -23,13 +23,13 @@ module.exports = (sequelize, dataTypes) => {
     // Definir las relaciones
     // products N:1
     
-    Color.associate = function (models) {            // asociarse a genres (modelo -> genre)
+    // Color.associate = function (models) {            // asociarse a genres (modelo -> genre)
         
-        Color.hasMany(models.Product, {           // llama al modelo CartDetail 
-            as: "product",                           // alias de la relacion -> N:1                                             
-            foreignKey: 'id_color',                  // PK en modelo Product   
-            timestamps: false
-        })
-    }
+    //     Color.hasMany(models.Product, {           // llama al modelo CartDetail 
+    //         as: "product",                           // alias de la relacion -> N:1                                             
+    //         foreignKey: 'id_color',                  // PK en modelo Product   
+    //         timestamps: false
+    //     })
+    // }
     return Color;
 };

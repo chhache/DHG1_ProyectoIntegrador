@@ -18,9 +18,8 @@
    <section class="productDetails">    
     <div class="detail-container">
         <div class="left-col">
-          <div class="img-product">
-            <img src="/images/1644528052458_img.jpg" alt="product image">
-            <!-- <img src="/public/images/<%= product.image1 %>" alt="product image">             -->
+          <div class="img-product">             
+            <img src="/images/<%= product.image1 %>" alt="product image">          
           </div>
           <div class="carrousel-img" >
             <div><img src="/images/<%= product.image2 %>" ></div>
@@ -41,7 +40,7 @@
              <div class="product-info">
                  <h2 class="product-name"><%= product.name %></h2>
                  <div class="img-product">
-                    <img src="images/<%= product.image1 %>" />
+                    <img src="/images/<%= product.image1 %>" />
                 </div>
                  <h3 class="product-price">$<%= product.price %></h3>
                  <p class="stock">Stock disponible</p>
