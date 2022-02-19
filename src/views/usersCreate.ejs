@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
+                  <h2 class="main-title">Creación de usuario MySQL</h2>      
+                </div>
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register-1">                                    
+                     <form action="/usersSQL/create" method="POST" enctype="multipart/form-data">                            
+                        <input type="text" placeholder="Nombre" name="first_name"   > 
+                        <input type="text" placeholder="Apellido" name="last_name" >
+                        <input type="mail" placeholder="Email" name="email" >
+                        <input type="password" placeholder="Contraseña" name="password" >
+                        <input type="password" placeholder="Repetir Contraseña" name="repassword" >                        
+                    <button type="submit" class="submit">  Guardar usuario  </button>
+                    </form>
+            </div>    
+        </div>         
+    </div>
+</body>
+</html>

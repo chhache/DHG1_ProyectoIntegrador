@@ -38,19 +38,20 @@
             <div class="buscar-name">
                 <!-- <form action="/movies/buscar" > // Por GET, para buscar por query string-->
                 <!-- Recibe la información en el mismo sitio (sin action='') -->
-                <form action="/products/search" method="GET"> 
+                <!-- <form action="/products/search" method="GET">  -->
+                <form action=" " method="GET">     
                     <input type="text" name="name" id="name">
                     <button class="boton-buscar" type="submit">Buscar un Producto</button>
                 </form>                
             </div>
-            <ul>
+            <!-- <ul>
                 <% for( let i = 0; i < products.length; i++ ) { %>
                 <li>
                     <a href="/products/<%= products[i].id %>"><%= products[i].name %></a>
                 </li>
                 <% } %>
         
-            </ul>
+            </ul> -->
         </main>
         <%- include('./partials/footer') %>                
     </body>

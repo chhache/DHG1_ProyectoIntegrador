@@ -50,7 +50,7 @@ module.exports = (sequelize, dataTypes) => {
     CreditCard.associate = function (models) {        // asociarse a genres (modelo -> genre)
         
         CreditCard.belongsTo(models.User, {         // llama al modelo User 
-            as: "user",                             // alias de la relacion -> N:1                                             
+            as: "userSQL",                             // alias de la relacion -> N:1                                             
             foreignKey: 'id_user',                  // PK en modelo Product   
             timestamps: false
         }),

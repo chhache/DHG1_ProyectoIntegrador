@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>       
+                </div>                               
+            </div>            
+        </div> 
+    </header>
+    <div class="banner-psc">
+        <img src="/images/carrusel3.jfif" alt="Banner">
+    </div> 
+ <main>
+    <h1><%= user.email %> </h1>    
+    <br>
+    <p>NOMBRE: <%= user.first_name %> </p>
+    <p>APELLIDO: <%= user.last_name %> </p>
+    <p>MAIL: <%= user.email %> </p>
+    <br>
+    <section>
+        <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
+        <!-- Ir a index.ejs y copiar botones y estilo para -> ADD -->
+        <a class="botonAgregar" href="/usersSQL/create">Agregar Usuario</a>
+        <a class="botonVolver" href="/usersSQL">Listado de Usuarios</a>
+        <a class="botonModificar" href="/usersSQL/edit/<%= user.id %>">Modificar Usuario</a>        
+    </section>           
+    </main>
+    <%- include('./partials/footer') %>
+    </body>
+</html>

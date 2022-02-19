@@ -34,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
     ShoppingCart.associate = function (models) {        // asociarse a genres (modelo -> genre)
         
         ShoppingCart.belongsTo(models.User, {            // llama al modelo CartDetail 
-            as: "user",                                 // alias de la relacion -> N:1                                             
+            as: "userSQL",                                 // alias de la relacion -> N:1                                             
             foreignKey: 'id_user',                      // PK en modelo Product   
             timestamps: false
         }),
