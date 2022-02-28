@@ -1,22 +1,23 @@
 {
-  "name": "pegasus",
+  "name": "dCompras",
   "version": "1.0.0",
-  "description": "Grupo 1 - Pegasus",
+  "description": "G1 - dCompras",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LucasComande/Grupo_1_Pegasus.git"
+    "type": "git",    
+    "url": "git+https://github.com/chhache/DHG1_ProyectoIntegrador.git"
+
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LucasComande/Grupo_1_Pegasus/issues"
+    "url": "https://github.com/chhache/DHG1_ProyectoIntegrador.git/issues"
   },
-  "homepage": "https://github.com/LucasComande/Grupo_1_Pegasus#readme",
+  "homepage": "https://github.com/chhache/DHG1_ProyectoIntegrador#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
