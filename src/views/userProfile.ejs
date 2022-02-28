@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %> 
+    <h2 class="main-nav">Usuarios</h2>
+        <main class="main">
+            <div class="container">                
+                <!-- <h2 class="main-title">Artículos </h2> -->
+                    <section class="container-products">
+                        <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
+                          
+                        <!-- <div class="product"> -->
+                        <div>  
+                            <h2>Hola <%= user.firstName %> </h2>
+				            <img src="/images/users/<%= user.image %> ">
+				            <br>
+                            <div>Nombre: <%= user.firstName %> </div>
+                            <div>Apellido: <%= user.lastName %> </div>
+				            <br>
+				            <div>Email: <%= user.email %> </div>
+                        </div>                               
+                    </section>
+            </div>
+        </main>
+        <%- include('./partials/footer') %>                
+    </body>
+</html>

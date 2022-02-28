@@ -8,16 +8,16 @@ const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require("./routes/productsRoutes");
 const usersRoutes = require ('./routes/usersRoutes')
 const usersSQLRoutes = require ('./routes/usersSQLRoutes')
-//const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
-// app.use(session({
-// 	secret: "Shhh, It's a secret",
-// 	resave: false,
-// 	saveUninitialized: false,
-// }));
-//app.use(cookies());
-//app.use(userLoggedMiddleware);
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+app.use(cookies());
+app.use(userLoggedMiddleware);
 // Servicio de express-validator para form
 app.use(express.urlencoded({ extended: false }));
 //Servicio de archivos estáticos (img, CSS y JS) se utiliza el middelware nativo express.static

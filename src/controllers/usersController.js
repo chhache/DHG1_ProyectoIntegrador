@@ -28,14 +28,16 @@ const usersController = {
 		//return res.json(req.file);
 		//accedes al id del ultimo elemento (0 no existiria) y le sumas 1 para los nuevos productos
 		const resultValidation = validationResult(req);
+		
+		res.send(resultValidation.errors);
 
 		if (resultValidation.errors.length > 0) {
 			return res.render('users/register', {
-				errors: resultValidation.mapped(),
+				errors: resultValidation.mapped(),				
 				oldData: req.body
 			});
 		}
-		
+				
 		let userInDB = User.findByField('email', req.body.email);
 				
 		if (userInDB) {
@@ -50,8 +52,9 @@ const usersController = {
 		}	
 
 		let userToCreate = {
-			...req.body,
+			...req.body,															// spread Operator
 			password: bcryptjs.hashSync(req.body.password, 10),
+			repassword: bcryptjs.hashSync(req.body.password, 10),
 			image: req.file == undefined ? 'image_user_default.png': req.file.filename // if ternario
 		}
 
@@ -95,7 +98,9 @@ const usersController = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('/users/profile');
+				//return res.redirect('/users/profile');
+				return res.redirect('/');
+				//return res.send('Login correcto');
 			} 
 			return res.render('users/login', {
 				errors: {
@@ -116,7 +121,8 @@ const usersController = {
 	},
 	profile: (req, res) => {
 		//res.send('Login exitoso') // Usuario validado
-		return res.render('index', {
+		//return res.render('users/userProfile', {
+		return res.render('userProfile', {
 		user: req.session.userLogged
 		});		
 	},
@@ -124,7 +130,7 @@ const usersController = {
 	logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();
-		return res.redirect('index');
+		return res.redirect('/');
 	},
 	redirect:function(req,res){
         res.redirect('index')
