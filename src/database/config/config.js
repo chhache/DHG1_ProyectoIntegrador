@@ -45,4 +45,5 @@ module.exports = {
   "database": "decompras_db",
   "host": "mysql-decompras.alwaysdata.net",   
   "dialect": "mysql"
-}
+  }
+}  
