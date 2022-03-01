@@ -32,10 +32,11 @@ module.exports = {
   },
   // Cambiar datos al subir a Heroku
   "production": {
-    "username": "decompras_chache",
-    "password": "deCompras_1357",
-    "database": "decompras_db",
-    "host": "mysql-decompras.alwaysdata.net",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOST,
+    "port": process.env.DB_PORT,
     "dialect": "mysql"
   }
 }
