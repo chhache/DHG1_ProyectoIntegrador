@@ -226,6 +226,18 @@
   padding:16px;
   font-size:16px;
 }
+.is-valid {
+  color: #198754;
+}
+.is-invalid {
+  color: #842029;
+}    
+.alert-warning{
+  color:#842029;
+  background-color: #F8D7DA;
+  text-align: center;
+  border-radius: 10px;
+}   
 
 /* -- Mobile-last -- */
 @media only screen and (max-width: 768px){
@@ -268,6 +280,6 @@
         /* color: blue; */
         font-size:11px;
         /* font-style:italic; */
-    }      
+    }    
 
 }
