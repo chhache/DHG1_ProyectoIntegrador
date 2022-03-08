@@ -26,10 +26,8 @@
                             name="firstName"
                             id="firstName"
                             value="<%= locals.oldData ? oldData.firstName : null %>"                            
-                            <% if (locals.errors && errors.firstName) { %>
-                               
-                                    <%= errors.firstName.msg %> 
-                               
+                            <% if (locals.errors && errors.firstName) { %>                               
+                                    <%= errors.firstName.msg %>                                
                             <% } %>    
                         >                        
                         <input 
@@ -50,10 +48,8 @@
                             class="user" 
                             name="email"
                             id="email"
-                            <% if (locals.errors && errors.email) { %>
-                                
-                                    <%= errors.email.msg %> 
-                                
+                            <% if (locals.errors && errors.email) { %>                                
+                                    <%= errors.email.msg %>                                 
                             <% } %>         
                         >
                         <input 
@@ -62,10 +58,8 @@
                             class="pass" 
                             name="password"
                             id="password"
-                            <% if (locals.errors && errors.password) { %>
-                                
-                                    <%= errors.password.msg %> 
-                                
+                            <% if (locals.errors && errors.password) { %>                                
+                                    <%= errors.password.msg %>                                 
                             <% } %> 
                         >   
                         <input 
@@ -74,10 +68,8 @@
                             class="pass" 
                             name="repassword"
                             id="repassword"
-                            <% if (locals.errors && errors.repassword) { %>
-                                
-                                    <%= errors.repassword.msg %> 
-                               
+                            <% if (locals.errors && errors.repassword) { %>                                
+                                    <%= errors.repassword.msg %>                                
                             <% } %> 
                         >
                         <input type="file" placeholder="Imagen" name="image" id="image">                        
