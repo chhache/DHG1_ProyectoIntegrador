@@ -55,6 +55,28 @@ Revisar código y estilos para porpuestas de mejoras de impacto en el proyecto.
 Revisar pendientes TRELLO
 Validar img con Multer (no carga imagenes)
 
+
+Sprint 7
+- Qué hizo ayer:
+Completar entregables
+
+- Si se encontró con algún impedimento:
+Falta de tiempo y coordinación con el equipo.
+Revisar código y estilos para porpuestas de mejoras de impacto en el proyecto.
+Revisar pendientes TRELLO
+
+
+Sprint 8
+- Qué hizo ayer:
+Completar Trello
+Reunión y designación de reponsables por entregables.
+
+- Si se encontró con algún impedimento:
+Falta de tiempo para finlaizar los pendientes del Sprint 7
+
 - Que va a hacer hoy:
-Completar CRUD (entregable 8).
-Entregable 8 -> CRUD Users
+Completar APIs /user & /user/:id (entregable 4).
+Completar APIs /products & /products/:id (entregable 5).
+
+
+

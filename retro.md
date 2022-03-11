@@ -104,6 +104,52 @@ Demoras en las entregas.
 Less Of:
 
 
+- Sprint 7 (04.03.2022)
+Keep doing:
+Entregas en término.
+Delegación de tareas.
+Seguimiento y comentarios actualizados por Trello.
+Ordenar propuestas y updates en  weekly standups -> weekly.md  
+Trabajo colaborativo y organizado.
+
+More of:
+Organizar y distribuir tareas y entregables al comienzo del Sprint para evitar retrasos.
+Evitar retrabajos innecesario por descoordinaciones y/o incumplimientos.
+Code review del equipo completo para entendimiento.
+Propuestas de mejoras (código y estilos) 
+Reportar con tiempo el no poder completar o cumplir con las tareas asignadas.
+Buscar apoyo en Fede y Mati para avanzar con pendiente.
+
+Start Doing:
+Debatir mejoras en gral (Código / Diseño / etc)
+
+Stop Doing:
+Malas prácticas en Git Hub, genera retrasos.
+Demoras en las entregas.
+
+Less Of:
+Asumir responsabilidades y no cumplir.
+Presentar trabajos en los plazos acordados para evitar demoras en tareas que dependen de las mismas.
+
+
+- Sprint 8 (00.00.2022)
+Keep doing:
+
+
+More of:
+
+
+Start Doing:
+
+
+Stop Doing:
+
+
+Less Of:
+
+
+
+
 Integrantes:
     > Christian Hache
     > Santiago Pasquini
