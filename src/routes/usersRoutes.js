@@ -73,7 +73,8 @@ router.get('/users', usersController.index) // Listado de usuarios (restaría me
 /*** Formulario registro usuario  ***/
 router.get('/register', guestMiddleware, usersController.register );  //Funciona.
 /*** Procesar el registro usuario + Validaciones ***/
-router.post('/register', uploadFile.single('image'), validations, usersController.processRegister);  //Funciona. Aparece un ? luego de apretar el boton.
+// router.post('/register', uploadFile.multiple('image'), validations, usersController.processRegister);  
+router.post('/register', uploadFile.single('image'), validations, usersController.processRegister);  
 
 /*** Formulario login usuario ***/
 router.get('/login', guestMiddleware,usersController.login ); //Funciona.

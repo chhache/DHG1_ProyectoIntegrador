@@ -9,12 +9,13 @@ const productsRoutes = require("./routes/productsRoutes");
 const usersRoutes = require ('./routes/usersRoutes')
 const usersSQLRoutes = require ('./routes/usersSQLRoutes')
 const apiUsersRoutes = require ('./routes/api/apiUsersRoutes');
+const apiProductsRoutes = require ('./routes/api/apiProductsRoutes');
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 app.use(session({
-	secret: "Shhh, It's a secret",
+	secret: "Secret",
 	resave: false,
 	saveUninitialized: false,
 }));
@@ -37,6 +38,7 @@ app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 app.use('/usersSQL', usersSQLRoutes);
 app.use('/api/users', apiUsersRoutes);
+app.use('/api/products', apiProductsRoutes);
 
 module.exports = app;
 

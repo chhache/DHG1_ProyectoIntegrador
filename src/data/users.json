@@ -1,6 +1,6 @@
 [
  {
-  "id": 27,
+  "id": 81,
   "email": "scattaneo@dcompras.net",
   "password": "$2a$10$9ZDqZXH3RzKMoRb.6XhOUOx1HZPVcudSAF3DcPVKWtDMovTyyv0O.",
   "repassword": "123456",
@@ -9,16 +9,16 @@
   "image": "1646051517307_user.png"
  },
  {
-  "id": 28,
+  "id": 61,
   "firstName": "Christian",
   "lastName": "Hache",
-  "email": "chrisitan.hache@dcompras.net",
+  "email": "chache@dcompras.net",
   "password": "$2a$10$JmU44ugWUpPO0s1kuXlzPu.6u1aunVlj1m0B4qvbjP5NjNwkRjBhm",
   "repassword": "123456",
   "image": "image_user_default.png"
  },
  {
-  "id": 29,
+  "id": 82,
   "firstName": "Santiago",
   "lastName": "Pasquini",
   "email": "spasquini@dcompras.net",
