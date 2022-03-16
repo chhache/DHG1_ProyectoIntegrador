@@ -1,9 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
-const {
-	validationResult
-} = require('express-validator');
+const {	validationResult } = require('express-validator');
 const User = require('../models/Users');
 
 
@@ -20,6 +18,21 @@ const usersController = {
 	// Formulario de registro usuario -> GET
 	register: function (req,res){
         res.render('users/register')
+		// **  Comparar password con repassword
+		// if(userToLogin) {
+		// 	let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+		// 	if (isOkThePassword) {
+		// 		delete userToLogin.password;
+		// 		req.session.userLogged = userToLogin;
+
+		// 		if(req.body.remember_user) {
+		// 			res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+		// 		}
+
+		// 		//return res.redirect('/users/profile');
+		// 		return res.redirect('/');
+		// 		//return res.send('Login correcto');
+		// 	} 
     },
 	// Proceso registro usuario -> POST
 	processRegister: (req, res) => {
@@ -29,6 +42,7 @@ const usersController = {
 		//accedes al id del ultimo elemento (0 no existiria) y le sumas 1 para los nuevos productos
 		const resultValidation = validationResult(req);
 		
+		// -- Enviar a JSON con errors -- //
 		res.send(resultValidation.errors);
 
 		if (resultValidation.errors.length > 0) {
@@ -54,7 +68,7 @@ const usersController = {
 		let userToCreate = {
 			...req.body,															// spread Operator
 			password: bcryptjs.hashSync(req.body.password, 10),
-			repassword: bcryptjs.hashSync(req.body.password, 10),
+			// repassword: bcryptjs.hashSync(req.body.password, 10),
 			image: req.file == undefined ? 'image_user_default.png': req.file.filename // if ternario
 		}
 

@@ -51,7 +51,7 @@ const validations = [
 		//.withMessage('No coniciden las contraseñas'),	
 	body('avatar').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', '.JPG', '.png', '.PNG', '.gif', '.GIF'];
 
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
@@ -81,6 +81,9 @@ router.get('/login', guestMiddleware,usersController.login ); //Funciona.
 /*** Procesar el login usuario***/
 router.post('/login', usersController.loginProcess);
 //router.post('/login', usersController.redirect);     //Funciona. Aparece un ? luego de apretar el boton.
+
+/*** Detalle de usuario - Sequelize***/ 
+router.get('/:id', usersController.detail);
 
 // Perfil de Usuario
 router.get('/profile', authMiddleware, usersController.profile);

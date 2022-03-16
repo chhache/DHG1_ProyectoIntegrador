@@ -246,7 +246,7 @@ const productsController = {
            		
 
 	cart: (req,res) =>{
-		res.send('En construcción');
+		res.render('underconstruction');
         //res.render('/');
     } 	
 }

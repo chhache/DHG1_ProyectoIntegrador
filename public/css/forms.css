@@ -7,7 +7,15 @@
     margin: 20px 20px;
     height: auto;
     background-color: #fff;
-    box-shadow: 1px 1px 10px 0px rgba(0,0,0,.5);
+    box-shadow: 1px 1px 10px 0px #12af9a;
+}
+.subConteiner{
+  display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: space-between;
+   align-items: baseline;
 }
 .register, .login{
     flex: 1; 
@@ -183,8 +191,9 @@
   outline: none;
 }
 .register-2{
-  padding: 40px;
-  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .register-2 h2{
   color: #797979;

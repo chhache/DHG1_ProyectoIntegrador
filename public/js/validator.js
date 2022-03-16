@@ -60,7 +60,7 @@ window.onload = function(){
             // var erPass=/^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/
             var erPass=/[a-zA-Z]+/g
             if(!rePass.exec(password.value)){
-                errors.push('El password ingresado no es válido, debes ingresar MAY y min ...')
+                errors.push('El password ingresado no es válido, debes ingresar May y Min ...')
             }
             else {
             password.classList.add('is-valid');
@@ -69,15 +69,17 @@ window.onload = function(){
             }
         };
 
-        // Validamos que el 2do password sea igual al primero
-        
-        if (password.value != repassword.value) {
-            errors.push('Las contraseñas ingresadas deben coincidir');
-            repassword.classList.add('is-invalid');
-        } else{
-            repassword.classList.add('is-valid');
-            repassword.classList.remove('is-invalid');
-        };
+        // Validamos que el 2do password sea igual al primero   
+        //return res.send(req.body.repassword, password.value)
+
+        //if (bcrypt.compareSync(req.body.repassword, password.value, )) {   
+        // if (password.value != repassword.value) {
+        //     errors.push('Las contraseñas ingresadas deben coincidir');
+        //     repassword.classList.add('is-invalid');
+        // } else{
+        //     repassword.classList.add('is-valid');
+        //     repassword.classList.remove('is-invalid');
+        // };
 
         // Validamos imagenes -> archivo válido (JPG, JPEG, PNG, GIF)
 

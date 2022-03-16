@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+const cors = require('cors');
 const app = express();
 const port = 3031
 const path = require('path');
@@ -32,6 +33,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname,'views'));
 
 app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en port ${port}`));
+
+// CORS -> Dashboard REACT (soluciona error de correr front-end (Dashboard) & back-end (API) en localhost)
+app.use(cors());
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);

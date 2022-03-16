@@ -32,11 +32,15 @@ router.post('/create', usersSQLController.store);       // -> Usar con Multer //
 /***Listado de usuarios - Sequelize ***/
 router.get('/', usersSQLController.list)                // Listado de usuarios (restaría mejorar la vista/estilos) 
 
+/*** Logout de un usuario - Sequelize ***/
+router.get('/logout', usersSQLController.logout);
+
 /*** Detalle de usuario - Sequelize***/ 
 router.get('/:id', usersSQLController.detail);          // 3. /products/:id (GET) Detalle de un producto particular. OK, queda maquillar.
 
 /*** Edición de un usuario - Sequelize***/
 router.get('/edit/:id', usersSQLController.edit);       // 5. /products/edit/:id (GET) Formulario de edición de productos. OK, queda maquillar.
 router.put('/:id', usersSQLController.update);          // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario). !FALTA!   
+
 
 module.exports = router

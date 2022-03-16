@@ -23,12 +23,14 @@ const usersSQLController = {
 	// Formulario de registro usuario -> GET
 	store: function (req,res){
         //res.send('STORE')
-		db.User.create(req.body)					// Spread operator
-													// Del modelo Movie, usamos el método create y recibimos .body que viaja por POST, podría armarse un objeto literal con las claves de cada campo, en este caso se llaman igual por ello podemos pasar todo el .body (name = columnas tabla origen) -> name: req.body.formularioName
+		db.User
+		.create(req.body)					// Spread operator
+											// Del modelo Movie, usamos el método create y recibimos .body que viaja por POST, podría armarse un objeto literal con las claves de cada campo, en este caso se llaman igual por ello podemos pasar todo el .body (name = columnas tabla origen) -> name: req.body.formularioName
 		//image1: req.file == undefined ? 'default-image.png': req.file.filename, // If Ternario ? si es undifined -> defaul.png SiNo -> 
 		.then(() => {              												// Callback para redireccinar la vista
-			//res.send(user)
-			res.redirect('/usersSQL');	// realizado lo anterior, la promesa redirije a /products
+			// //res.send(user)
+			// res.redirect('/usersSQL');
+			res.redirect('/usersSQL');	
 			});									 
 	},
 	list: (req,res) => {
@@ -63,9 +65,15 @@ const usersSQLController = {
             }
         })
             .then(() =>{
-                res.redirect('/usersSQL')
+                // res.redirect('/usersSQL')
+				res.redirect('/usersSQL')
             })	
-    }	
+    },
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 };
 
 module.exports = usersSQLController

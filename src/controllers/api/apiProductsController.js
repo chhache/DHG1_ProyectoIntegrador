@@ -7,16 +7,26 @@ const { Op } = require("sequelize");
 
 const apiProductsController = {
     
-    list: function (req, res){
+   list: function (req, res){
+
+        let totalCat = 0;
+
+        db.Category
+            .findAll()
+            .then(categories =>{
+                totalCat = categories.length
+            })
+
         db.Product
             .findAll()
             .then(products => {
                 return res.status(200).json({
-                    total: products.length,  // lo que pide como count ->  // lo que pide como count by category
+                    total: products.length,  // lo que pide como count
+                    countByCategory : totalCat, // lo que pide como count by category
                     data: products,         // info de los productos
                     url: "api/products"
                     }
-                )
+                )                
             })
 
     },
