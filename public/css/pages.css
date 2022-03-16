@@ -36,7 +36,13 @@
     width: 50px;
     transform: rotate(-90deg);   
 }
-
+.productsale {
+    position: relative;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+}
 .product a{
     text-decoration: none;
     color: #444;

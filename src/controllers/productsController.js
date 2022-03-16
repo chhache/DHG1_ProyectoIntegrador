@@ -207,35 +207,48 @@ const productsController = {
 					})
 			})
 	},
+
+	sale: (req,res) => {
+        db.Product.findAll()
+            .then(products =>{
+                //res.send(products)
+                res.render('productsListSale.ejs', {products})
+            })
+    },
+	
 	search: (req,res) => {                                          // Método search   
         if(req.query.name){                                         // Recibe de un callback como parámetro el titulo de la película a través de un Query String  por URL -> ?
             db.Product                                              // El Callback conecta al modelo Product
-        .findAll({                                                  // Busca todos los productos   
-            where: {                                                // Que conicidan con lo recibido por POST (método asíncrono recibido por Form)  
-                name: {                                             // El campo name 
-                    [Op.like]: '%' + req.query.name + '%'           // "like" = % palabraBuscar % -> usa wilcards para completar los caracteres  
-                } 
-            }    
-        })    
+        		.findAll({                                          // Busca todos los productos   
+            		where: {                                        // Que conicidan con lo recibido por POST (método asíncrono recibido por Form)  
+                		name: {                                     // El campo name 
+                    		[Op.like]: '%' + req.query.name + '%'   // "like" = % palabraBuscar % -> usa wilcards para completar los caracteres  
+                		} 
+            		}    
+        		})    
         .then(products => {                                                 // Recibe de la promesa la movie a buscar
-           if(products.length > 0) {                                        // Si el array de objetos es > a 0 (osea existen movies)  
-                res.render('productsList', {products})                        // Si es true ->   renderiza movieList.ejs con el clave:valor resultante de la consulta {movie:movie}
-        //   } else {                                                         // Si es false  
+           if(products.length > 0) { 
+			   //res.send('Soy searhc POST')                                       // Si el array de objetos es > a 0 (osea existen movies)  
+               res.render('productsList', {products})                        // Si es true ->   renderiza movieList.ejs con el clave:valor resultante de la consulta {movie:movie}
+			}else{     
+				//res.send('Sin coincidencias')                                // Sino existe en la BD local o externa (consultada a traves de API con fetch) 
+				res.render('productsList', {products: []})                     // Renderizar la vista -> moviesList.ejs sin valor (misma lógica anterior pero pasar un array vacio)                   
+				}            
+			})
+		}	         
+	}, 
+	
+		//   } else {                                                         // Si es false  
         //        fetch('http://www.omdbapi.com/?apikey=d4e35e92&t=' + req.query.titulo) //  Ir a buscar: www.site.com -> promesa en un .then (devuelve la respuesta de la petición), Esa petición tambien es una promesa, por ello vamos a pedir que esa respuesta sea, procesada en un formato json ( a traves de otro then)    
         //        .then(movie => {                                           // En el 2° .then puedo trabajar con la información que llega de la API, idem lógica anterior {movie:movie}
         //             res.render('moviesDetailOmdb', {movie})
         //        })
-           		}            
-        	})
-		}else{                                                            // Sino existe en la BD local o externa (consultada a traves de API con fetch) 
-        	res.render('productsList', {products: []})                     // Renderizar la vista -> moviesList.ejs sin valor (misma lógica anterior pero pasar un array vacio)                   
-    	}         
-    },
+           		
 
-	productCart: (req,res) =>{
-		//res.send(products)
-        res.render('productsCart');
+	cart: (req,res) =>{
+		res.send('En construcción');
+        //res.render('/');
     } 	
-};
+}
 
 module.exports = productsController

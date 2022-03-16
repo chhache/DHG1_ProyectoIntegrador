@@ -22,6 +22,16 @@ const uploadFile = multer({storage: storage});
 /*** Listado de producto ***/
 router.get('/',productsController.list)         // 1. /products (GET) Listado de productos. OK, queda maquillar   
 
+/*** Buscar un producto ***/ 
+//router.post('/search', productsController.search);
+router.get('/search', productsController.search);
+
+/*** Comprar un producto ***/
+router.get('/cart', productsController.cart);
+
+/*** Sales de productos */
+router.get('/sale',productsController.sale)
+
 /*** Creación de producto ***/
 router.get('/create', productsController.create);   // 2. /products/create (GET) Formulario de creación de producto
 router.post('/create', uploadFile.single('image1'), productsController.store); // -> Usar con Multer // 4. /products (POST) Acción de creación (a donde se envía el formulario)
@@ -36,11 +46,6 @@ router.put('/:id', uploadFile.single('image1'), productsController.update);   //
 /*** Eliminar un producto ***/ 
 router.delete('/:id', productsController.destroy);    // 7. /products/:id (DELETE) Acción de borrado. 
 
-/*** Buscar un producto ***/ 
-router.get('/search', productsController.search);
-
-/*** Comprar un producto ***/
-router.get('/productsCart', productsController.productCart);  // No se muestra como corresponde -> pendiente a revisar
 
 module.exports = router;
 

@@ -8,25 +8,24 @@
                 <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>                
             </div>             
             <div class="main-header__container">
-                <span class="main-header__txt">Ayuda</span>
+                <!-- <a href="/help" target="_blank"><span class="main-header__txt">Ayuda</span></a> -->
                 <p class="main-header__txt"> <i class="fas fa-phone"></i>  Tel +54 011-123456</p>                
             </div>  
             <div class="main-header__container">
-                <a href="/users/login" target="_blank" class="main-header__link__txt"> Inicia Sesión  |  Registrate </a> 
+                <a href="/users/login" target="_blank" class="main-header__link__txt"> Inicia Sesión  | Registrarse</a> 
                 <a href="/users/login" target="_blank" class="main-header__link"><i class="fas fa-user"></i></a> 
-                <a href="/products/productsCart" class="main-header__btn">Mis Compras  | <i class="fas fa-shopping-cart"></i></a>
-                <input type="search" class="main-header__input" placeholder="Buscar producto...">
-                <!-- <i class="fas fa-search"></i> -->
+                <a href="/products/cart" class="main-header__btn">Mis Compras  | <i class="fas fa-shopping-cart"></i></a>
+                <!-- <input type="search" class="main-header__input" placeholder="Buscar producto...">                 -->
             </div>
         </div>
         <nav class="main-nav" id="main-nav">
             <!-- atajo EMET -> ul.menu>li.menu__item*5>a.menu__link -->
             <ul class="menu">
                 <li class="menu__item"><a href="/products" class="menu__link">Todos los productos</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Ofertas</a></li>
+                <li class="menu__item"><a href="/products/sale" class="menu__link">Ofertas</a></li>
                 <li class="menu__item"><a href="/products/create" class="menu__link">Crear producto</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Ayuda</a></li>
-                <% if (locals.isLogged) { %>
+                <li class="menu__item"><a href="/help" class="menu__link">Ayuda</a></li>
+                <!-- <% if (locals.isLogged) { %>
 					<li>
 						<a href="#" id="dropUser" role="button">
 							<img src="/images/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
@@ -37,12 +36,25 @@
 							<li><hr></li>
 							<a href="/users/logout">Salir</a>
 						</ul>
-					</li>
-				<% } else { %>
-					<li><a href="/users/register">Registrarse</a></li>
-					<li><a href="/users/login">Loguearse</a></li>
-				<% } %>
-                <!-- <li class="menu__item"><a href="" class="menu__link">Contacto</a></li> -->
+					</li>				
+				<% } %>  -->
+                <% if (locals.isLogged) { %>
+					<li>
+                        <ul>
+                            <li>
+
+                            </li>
+                            <a href="#" id="dropUser" role="button" style="text-decoration: none">  
+                                <img src="/images/users/<%= locals.userLogged.image %>"  width="40" style="border-radius: 100%;">
+                                   Hola   <%= locals.userLogged.firstName %>    
+                            </a>
+                            <hr>
+                            <a href="/usersSQL/<%= locals.userLogged.id %>" style="text-decoration: none;">  Perfil  |  </a>
+                            <!-- <hr> -->
+                            <a href="/users/logout" style="text-decoration: none;">Salir   </a>
+                        </ul>
+					</li>				
+				<% } %>               
             </ul>
         </nav>
     </div>

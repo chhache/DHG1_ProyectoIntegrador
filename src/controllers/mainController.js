@@ -25,7 +25,11 @@ const mainController = {
     // },    
     redirect: (req,res) => {
         res.redirect('index')
-    },    
+    },
+    
+    help: (req, res) =>{
+        res.render('help');
+    }    
 }
 
 module.exports = mainController

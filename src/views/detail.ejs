@@ -47,16 +47,16 @@
              </div>
              <div class="quantity-btn">
                  <button class="minus">-</button>
-                 <input type="number" class="quantity-prodcut" value="1">
+                 <input type="number" class="quantity-product" value="1">
                  <button class="plus">+</button>
              </div>
              <div class="actions">
                  <button class="btn primary-btn">Comprar</button>
                  <button class="btn secondary-btn">Agregar al carrito</button>
-                 <br><br>
-                 <a href="/products/edit/<%= product.id %>" class="btn primary-btn">Editar producto</a>             
+                 <br>
+                 <a href="/products/edit/<%= product.id %>" class="btn primary-btn">Editar producto</a> 
                  <form action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
-				    <button type="submit" class="btn secondary-btn">Eliminar producto     </button>
+                    <button type="submit" class="btn secondary-btn">Eliminar producto</button> 
 			    </form>
              </div>
              <div class="product-description">
