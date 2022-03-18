@@ -12,7 +12,6 @@ const User = {
 	// fileName: './data/users.json',
     fileName: path.join(__dirname, '../data/users.json'),
 
-
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
 	},
@@ -49,9 +48,10 @@ const User = {
 			...userData
 		}
 		allUsers.push(newUser);
+		//allUsers.push(userData);
 		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
 		return newUser;
-	},
+	},	
 // *** Eliminar usuario ***
 	delete: function (id) {
 		let allUsers = this.findAll();
@@ -62,3 +62,6 @@ const User = {
 }
 
 module.exports = User;
+
+
+//console.log(User.delete(84));
