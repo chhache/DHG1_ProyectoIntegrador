@@ -15,7 +15,13 @@
                 <a href="/users/login" target="_blank" class="main-header__link__txt"> Inicia Sesión  | Registrarse</a> 
                 <a href="/users/login" target="_blank" class="main-header__link"><i class="fas fa-user"></i></a> 
                 <a href="/products/cart" class="main-header__btn">Mis Compras  | <i class="fas fa-shopping-cart"></i></a>
-                <!-- <input type="search" class="main-header__input" placeholder="Buscar producto...">                 -->
+                <!-- <input type="search" class="main-header__input" placeholder="Buscar producto...">    -->
+                
+                <form action="/products/search" method="GET">     
+                    <input type="text" name="name" id="name">
+                    <!-- <button class="submit" type="submit">Buscar un Producto</button> -->
+                    <button type="submit">  Buscar producto ... </button>  <i class="fas fa-search"></i>
+                </form>  
             </div>
         </div>
         <nav class="main-nav" id="main-nav">
@@ -55,7 +61,8 @@
                         </ul>
 					</li>				
 				<% } %>               
-            </ul>
+            </ul>            
         </nav>
-    </div>
+    </div>   
+    
 </header>

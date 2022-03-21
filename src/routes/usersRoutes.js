@@ -73,8 +73,8 @@ router.get('/users', usersController.index) // Listado de usuarios (restaría me
 /*** Formulario registro usuario  ***/
 router.get('/register', guestMiddleware, usersController.register );  //Funciona.
 /*** Procesar el registro usuario + Validaciones ***/
-// router.post('/register', uploadFile.multiple('image'), validations, usersController.processRegister);  
 router.post('/register', uploadFile.single('image'), validations, usersController.processRegister);  
+// router.post('/register', uploadFile.multiple('image'), validations, usersController.processRegister);  
 
 /*** Formulario login usuario ***/
 router.get('/login', guestMiddleware,usersController.login ); //Funciona.
@@ -88,6 +88,11 @@ router.get('/:id', usersController.detail);
 // Perfil de Usuario
 router.get('/profile', authMiddleware, usersController.profile);
 //router.post('/profile', authMiddleware, usersController.profile);
+
+
+/*** Creación de usuario - Sequelize ***/
+//router.get('/create', usersController.create);       // 2. /users/create (GET) Formulario de creación de producto
+//router.post('/create', usersController.store);       // -> Usar con Multer // 4. /users/create (POST) Acción de creación (a donde se envía el formulario)
 
 // Logout
 router.get('/logout', usersController.logout);

@@ -4,7 +4,6 @@ const bcryptjs = require('bcryptjs');
 const {	validationResult } = require('express-validator');
 const User = require('../models/Users');
 
-
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -42,8 +41,8 @@ const usersController = {
 		//accedes al id del ultimo elemento (0 no existiria) y le sumas 1 para los nuevos productos
 		const resultValidation = validationResult(req);
 		
-		// -- Enviar a JSON con errors -- //
-		res.send(resultValidation.errors);
+		// -- Enviar a JSON con errors para visualizar por navegador
+		//res.send(resultValidation.errors);
 
 		if (resultValidation.errors.length > 0) {
 			return res.render('users/register', {
@@ -52,23 +51,22 @@ const usersController = {
 			});
 		}
 				
-		let userInDB = User.findByField('email', req.body.email);
+		let userInDB = User.findByField('email', req.body.email);	
+		console.log(userInDB);
 				
-		if (userInDB) {
-			return res.render('users/register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}	
+		// if (userInDB) {
+		// 	 return res.render('/users/register', {
+		// 		errors: {
+		// 			email: {msg: 'Este email ya está registrado, usuario inválido'}
+		// 		},
+		// 		oldData: req.body
+		// 	});
+		// }
 
 		let userToCreate = {
 			...req.body,															// spread Operator
 			password: bcryptjs.hashSync(req.body.password, 10),
-			// repassword: bcryptjs.hashSync(req.body.password, 10),
+			repassword: bcryptjs.hashSync(req.body.password, 10),
 			image: req.file == undefined ? 'image_user_default.png': req.file.filename // if ternario
 		}
 
@@ -93,8 +91,8 @@ const usersController = {
     detail: (req,res) => {
         let idUser = req.params.id 
 		const userMostrar = users.find(el => el.id == idUser); 
-        res.send({users: userMostrar})
-		res.render('users/detail', {users: userMostrar});
+        //res.send({users: userMostrar})
+		res.render('users/detail', {user: userMostrar});
     },
 	login: (req,res) => {
         res.render('users/login')
@@ -109,7 +107,7 @@ const usersController = {
 				req.session.userLogged = userToLogin;
 
 				if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 3 }) // 1000 = 1 seg * 60 = 1min * 2 = 2 min 
 				}
 
 				//return res.redirect('/users/profile');

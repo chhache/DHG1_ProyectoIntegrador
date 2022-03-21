@@ -5,8 +5,8 @@ const sequelize = db.sequelize							// Requrimos sequlize
 //const {Op} = require('sequelize') 						// Constante para requerir Operadores de sequelize
 
 // Estructura BD JSON -> Sprint 5
-//const productsFilePath = path.join(__dirname, '../data/products.json');
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const productsFilePath = path.join(__dirname, '../data/products.json');
+// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     index: function (req,res){

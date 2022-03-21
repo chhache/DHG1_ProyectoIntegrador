@@ -9,19 +9,23 @@ module.exports = (sequelize, dataTypes) => {
         },        
         first_name: {
             type: dataTypes.STRING(255),
-            allowNull: true
+            allowNull: false
         },
         last_name: {
             type: dataTypes.STRING(255),
-            allowNull: true
+            allowNull: false
         },
         email: {
             type: dataTypes.STRING(255),
-            allowNull: true
+            allowNull: false
         },
         password: {
             type: dataTypes.STRING(255),
-            allowNull: true
+            allowNull: false
+        },
+        repassword: {
+            type: dataTypes.STRING(255),
+            allowNull: false
         },
         image: {
             type: dataTypes.STRING(100),
@@ -39,19 +43,19 @@ module.exports = (sequelize, dataTypes) => {
     // Definir las relaciones
     // products N:1
     
-    User.associate = function (models) {            // asociarse a genres (modelo -> genre)
+    // User.associate = function (models) {            // asociarse a genres (modelo -> genre)
         
-        User.hasMany(models.ShoppingCart, {         // llama al modelo CartDetail 
-            as: "shoppingCart",                          // alias de la relacion -> N:1                                             
-            foreignKey: 'id_user',                 // PK en modelo Product   
-            timestamps: false
-        }),
+    //     User.hasMany(models.ShoppingCart, {         // llama al modelo CartDetail 
+    //         as: "shoppingCart",                          // alias de la relacion -> N:1                                             
+    //         foreignKey: 'id_user',                 // PK en modelo Product   
+    //         timestamps: false
+    //     }),
 
-        User.hasMany(models.CreditCard, {         // llama al modelo CartDetail 
-            as: "creditCard",                          // alias de la relacion -> N:1                                             
-            foreignKey: 'id_user',                 // PK en modelo Product   
-            timestamps: false
-        })
-    }
+    //     User.hasMany(models.CreditCard, {         // llama al modelo CartDetail 
+    //         as: "creditCard",                          // alias de la relacion -> N:1                                             
+    //         foreignKey: 'id_user',                 // PK en modelo Product   
+    //         timestamps: false
+    //     })
+    // }
     return User;
 };

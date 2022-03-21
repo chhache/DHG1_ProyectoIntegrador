@@ -5,17 +5,27 @@ const sequelize = db.sequelize							// Requrimos sequlize
 const {Op} = require('sequelize') 						// Constante para requerir Operadores de sequelize
 
 const bcryptjs = require('bcryptjs');
-// const {
-// 	validationResult
-// } = require('express-validator');
-// const User = require('../models/Users');
+
+const {
+	validationResult
+} = require('express-validator');
+const User = require('../database/models/User');
 
 
 // const usersFilePath = path.join(__dirname, '../data/users.json');
 // const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersSQLController = {
+	
+	list: (req,res) => {
+        //res.send('LIST')
+		db.User.findAll()								// Buscamos todos los productos con findAll -> método de sequlize
+			.then(users =>{								// .then toma la promesa y recibe la variable products
+				//res.send(products)
+				res.render('usersList.ejs', {users})	 // Renderizamos la vista productList -> products:products (clave:valor)
+			})
 
+    },
     create: (req,res) => {
 		//res.send('CREATE');
         res.render("usersCreate");
@@ -33,15 +43,7 @@ const usersSQLController = {
 			res.redirect('/usersSQL');	
 			});									 
 	},
-	list: (req,res) => {
-        //res.send('LIST')
-		db.User.findAll()								// Buscamos todos los productos con findAll -> método de sequlize
-			.then(users =>{								// .then toma la promesa y recibe la variable products
-				//res.send(products)
-				res.render('usersList.ejs', {users})	 // Renderizamos la vista productList -> products:products (clave:valor)
-			})
-
-    },
+	
     detail: (req,res) => {
         //res.send('DETAIL')
 		db.User.findByPk(req.params.id)					// Buscar el producto por el ID que recibe por URL-> select id.product from products where id like 'id.buscado'
@@ -64,9 +66,9 @@ const usersSQLController = {
                 id:req.params.id					// Condicional -> coincida el ID con el ID que viaja por URL
             }
         })
-            .then(() =>{
-                // res.redirect('/usersSQL')
-				res.redirect('/usersSQL')
+            .then( user => {
+                //res.redirect('/usersSQL')
+				res.render('/usersSQL', )
             })	
     },
 	logout: (req, res) => {

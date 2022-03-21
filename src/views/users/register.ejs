@@ -35,7 +35,8 @@
                             placeholder="Apellido"                            
                             class="user"    
                             name="lastName"
-                            id="lastName"                       
+                            id="lastName"
+                            value="<%= locals.oldData ? oldData.lasttName : null %>"
                             <% if (locals.errors && errors.lastName) { %>
                                 <div>
                                     <%= errors.lastName.msg %> 
@@ -48,6 +49,7 @@
                             class="user" 
                             name="email"
                             id="email"
+                            value="<%= locals.oldData ? oldData.email : null %>"
                             <% if (locals.errors && errors.email) { %>                                
                                     <%= errors.email.msg %>                                 
                             <% } %>         
@@ -57,7 +59,7 @@
                             placeholder="Contraseña (*)" 
                             class="pass" 
                             name="password"
-                            id="password"
+                            id="password"                            
                             <% if (locals.errors && errors.password) { %>                                
                                     <%= errors.password.msg %>                                 
                             <% } %> 
@@ -73,13 +75,12 @@
                             <% } %> 
                         >
                         <input type="file" placeholder="Imagen" name="image" id="image">                        
-                        <input type="submit" class="submit" value="REGISTRARSE">                       
+                        <input type="submit" class="submit" value="REGISTRARSE" value="<%= locals.oldData ? oldData.email : null %>">                    
                     </form>
-            </div>           
-            
+            </div>             
         </div>         
     </div>
     <!-- Vinculo externo para validacion de front-end  -->
-    <!-- <script src="/js/validator.js"></script> -->
+    <script src="/js/validator.js"></script>
 </body>
 </html>

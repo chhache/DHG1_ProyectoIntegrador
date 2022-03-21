@@ -42,5 +42,4 @@ router.get('/:id', usersSQLController.detail);          // 3. /products/:id (GET
 router.get('/edit/:id', usersSQLController.edit);       // 5. /products/edit/:id (GET) Formulario de edición de productos. OK, queda maquillar.
 router.put('/:id', usersSQLController.update);          // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario). !FALTA!   
 
-
 module.exports = router
