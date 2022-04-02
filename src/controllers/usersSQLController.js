@@ -38,9 +38,9 @@ const usersSQLController = {
 											// Del modelo Movie, usamos el método create y recibimos .body que viaja por POST, podría armarse un objeto literal con las claves de cada campo, en este caso se llaman igual por ello podemos pasar todo el .body (name = columnas tabla origen) -> name: req.body.formularioName
 		//image1: req.file == undefined ? 'default-image.png': req.file.filename, // If Ternario ? si es undifined -> defaul.png SiNo -> 
 		.then(() => {              												// Callback para redireccinar la vista
-			// //res.send(user)
+			res.send('Creación Exitosa')
 			// res.redirect('/usersSQL');
-			res.redirect('/usersSQL');	
+			//res.redirect('/usersSQL');	
 			});									 
 	},
 	

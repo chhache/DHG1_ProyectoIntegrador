@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models'); 				// Requerimos el dir donde almacenamos los modelos
-const sequelize = db.sequelize							// Requrimos sequlize
+const sequelize = db.sequelize							// Requerimos sequlize
 const {Op} = require('sequelize') 						// Constante para requerir Operadores de sequelize
 
 //* Requerir path y parsear JSON */

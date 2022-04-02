@@ -26,7 +26,7 @@
 
                      <!-- Imprimir array de errores -->
                      <ul class="errores"></ul>
-                     <form class='form' action="/usersSQL/create" method="POST" enctype="multipart/form-data">
+                     <form class='form' action="/usrs/create" method="POST" enctype="multipart/form-data">
                          <input 
                              type="text"
                              placeholder="Nombre"
@@ -34,7 +34,7 @@
                              name="first_name"
                              id="first_name"
                              value="<%= locals.oldData ? oldData.first_name : null %>"                            
-                             <% if (locals.errors && errors.firstName) { %>                               
+                             <% if (locals.errors && errors.first_name) { %>                               
                                      <%= errors.first_name.msg %>                                
                              <% } %>    
                          >                        
@@ -43,7 +43,7 @@
                              placeholder="Apellido"                            
                              class="user"    
                              name="last_name"
-                             id="last_ame"                       
+                             id="last_name"                       
                              <% if (locals.errors && errors.last_name) { %>
                                  <div>
                                      <%= errors.last_name.msg %> 

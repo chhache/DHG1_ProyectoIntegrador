@@ -7,7 +7,8 @@ const port = 3031
 const path = require('path');
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require("./routes/productsRoutes");
-const usersRoutes = require ('./routes/usersRoutes')
+const usrsRoutes = require ('./routes/usrsRoutes');
+const usersRoutes = require ('./routes/usersRoutes');
 const usersSQLRoutes = require ('./routes/usersSQLRoutes')
 const apiUsersRoutes = require ('./routes/api/apiUsersRoutes');
 const apiProductsRoutes = require ('./routes/api/apiProductsRoutes');
@@ -39,6 +40,7 @@ app.use(cors());
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
+app.use('/usrs', usrsRoutes);
 app.use('/users', usersRoutes);
 app.use('/usersSQL', usersSQLRoutes);
 app.use('/api/users', apiUsersRoutes);

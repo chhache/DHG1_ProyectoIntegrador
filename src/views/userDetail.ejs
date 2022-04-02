@@ -15,7 +15,7 @@
         <img src="/images/carrusel3.jfif" alt="Banner">
     </div> 
  <main>
-    <h1><%= user.email %> </h1>    
+    <h1>USUARIO: <%= user.email %> </h1>    
     <br>
     <p>NOMBRE: <%= user.first_name %> </p>
     <p>APELLIDO: <%= user.last_name %> </p>
@@ -24,9 +24,9 @@
     <section>
         <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
         <!-- Ir a index.ejs y copiar botones y estilo para -> ADD -->
-        <a class="botonAgregar" href="/usersSQL/create">Agregar Usuario</a>
-        <a class="botonVolver" href="/usersSQL">Listado de Usuarios</a>
-        <a class="botonModificar" href="/usersSQL/edit/<%= user.id %>">Modificar Usuario</a>        
+        <a class="botonAgregar" href="/usrs/create">Agregar Usuario</a>
+        <a class="botonVolver" href="/usrs">Listado de Usuarios</a>
+        <a class="botonModificar" href="/usrs/edit/<%= user.id %>">Modificar Usuario</a>        
     </section>           
     </main>
     <%- include('./partials/footer') %>

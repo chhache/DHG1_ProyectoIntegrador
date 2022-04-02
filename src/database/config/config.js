@@ -1,4 +1,4 @@
-require('dotenv').config();       // requerimos el paquete para ver variables de entorno
+//require('dotenv').config();       // requerimos el paquete para ver variables de entorno
 
 module.exports = {
   //* Conección alwaysdata.com */
