@@ -72,7 +72,7 @@
 }
 .container__testimonial{
     text-align: center;    
-    background-color: #f7f7f7;
+    background-color: #e4e2e2;
     padding: 10px;
     margin: 10px 0;
 }
@@ -86,7 +86,7 @@
 }
 .btn-shop{
     display: block;
-    border: 2px solid #12af9a;
+    border: 2px solid #737777;
     color: #333;
     font-weight: bold;
     padding: 10px;
@@ -97,7 +97,7 @@
     transition: all 0.5s;    
 }
 .btn-shop:hover{
-    background-color: #12af9a;
+    background-color: #737777;
     color: #fff;
 }
 .tip i{

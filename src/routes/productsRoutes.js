@@ -40,11 +40,11 @@ router.post('/create', uploadFile.single('image1'), productsController.store); /
 router.get('/:id', productsController.detail);   // 3. /products/:id (GET) Detalle de un producto particular. OK, queda maquillar.
 
 /*** Edición de un producto ***/
-router.get('/edit/:id', productsController.edit);                              // 5. /products/edit/:id (GET) Formulario de edición de productos. OK, queda maquillar.
-router.put('/:id', uploadFile.single('image1'), productsController.update);   // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario). !FALTA!   
+router.get('/edit/:id', productsController.edit);                           // 5. /products/edit/:id (GET) Formulario de edición de productos. OK, queda maquillar.
+router.put('/:id', uploadFile.single('image1'), productsController.update); // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario). !FALTA!   
 
 /*** Eliminar un producto ***/ 
-router.delete('/:id', productsController.destroy);    // 7. /products/:id (DELETE) Acción de borrado. 
+router.delete('/:id', productsController.destroy);                          // 7. /products/:id (DELETE) Acción de borrado. 
 
 
 module.exports = router;

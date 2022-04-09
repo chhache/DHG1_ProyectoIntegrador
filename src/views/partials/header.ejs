@@ -9,7 +9,7 @@
             </div>             
             <div class="main-header__container">
                 <!-- <a href="/help" target="_blank"><span class="main-header__txt">Ayuda</span></a> -->
-                <p class="main-header__txt"> <i class="fas fa-phone"></i>  Tel +54 011-123456</p>                
+                <!-- <p class="main-header__txt"> <i class="fas fa-phone"></i>  Tel +54 011-123456</p>                 -->
             </div>  
             <div class="main-header__container">
                 <a href="/users/login" target="_blank" class="main-header__link__txt"> Inicia Sesión  | Registrarse</a> 
@@ -55,9 +55,11 @@
                                    Hola   <%= locals.userLogged.firstName %>    
                             </a>
                             <hr>
-                            <a href="/usersSQL/<%= locals.userLogged.id %>" style="text-decoration: none;">  Perfil  |  </a>
+                            <!-- <a href="/usersSQL/<%= locals.userLogged.id %>" style="text-decoration: none;">  Perfil  |  </a> -->
+                            <a href="/usrs/<%= locals.userLogged.id %>" style="text-decoration: none;">  Perfil  |  </a>
                             <!-- <hr> -->
-                            <a href="/usersSQL/logout" style="text-decoration: none;">Salir   </a>
+                            <!-- <a href="/usersSQL/logout" style="text-decoration: none;">Salir   </a> -->
+                            <a href="/usrs/logout" style="text-decoration: none;">Salir   </a>
                         </ul>
 					</li>				
 				<% } %>               

@@ -72,6 +72,13 @@ const validations = [
 	})
 ]
 
+/*** Formulario login usuario - Sequelize ***/
+router.get('/login', guestMiddleware, usrsController.login ); //Funciona.
+/*** Procesar el login usuario - Sequelize ***/
+router.post('/login', usrsController.loginProcess);
+/*** Logout de un usuario - Sequelize ***/
+router.get('/logout', usrsController.logout);
+
 /***Listado de usuarios - Sequelize ***/
 router.get('/', usrsController.list)                // Listado de usuarios (restaría mejorar la vista/estilos) 
 
@@ -84,10 +91,9 @@ router.get('/:id', usrsController.detail);          // 3. /usrs/:id (GET) Detall
 
 /*** Edición de un usuario - Sequelize***/
 router.get('/edit/:id', usrsController.edit);       // 5. /usrs/edit/:id (GET) Formulario de edición de Usuarios.
-router.patch('/:id', usrsController.update);        // 6. /usrs/:id (PATCH) Edición (a donde se envía el formulario).   
+router.patch('/edit/:id', usrsController.update);        // 6. /usrs/:id (PATCH) Edición (a donde se envía el formulario).   
 
-/*** Logout de un usuario - Sequelize ***/
-// router.get('/logout', usrsController.logout);
-
+/*** Eliminar un usuario - Sequelize ***/ 
+router.delete('/:id', usrsController.destroy);                          // 7. /products/:id (DELETE) Acción de borrado. 
 
 module.exports = router

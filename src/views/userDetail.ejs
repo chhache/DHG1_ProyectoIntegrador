@@ -26,7 +26,15 @@
         <!-- Ir a index.ejs y copiar botones y estilo para -> ADD -->
         <a class="botonAgregar" href="/usrs/create">Agregar Usuario</a>
         <a class="botonVolver" href="/usrs">Listado de Usuarios</a>
-        <a class="botonModificar" href="/usrs/edit/<%= user.id %>">Modificar Usuario</a>        
+        <a class="botonModificar" href="/usrs/edit/<%= user.id %>">Modificar Usuario</a>
+        <a class="botonEliminar" href="/usrs/delete//<%= user.id %>">Eliminar Usuario</a> 
+        
+        <div class="actions">
+            <a href="/usrs/edit/<%= user.id %>" class="btn primary-btn">Modificar</a> 
+            <form action="/usrs/<%= user.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
+               <button type="submit" class="btn secondary-btn">Eliminar</button> 
+           </form>
+        </div>
     </section>           
     </main>
     <%- include('./partials/footer') %>
