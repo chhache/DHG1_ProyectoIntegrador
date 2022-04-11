@@ -5,3 +5,6 @@ let hash = bcryptjs.hashSync('Hola123', 10);
 
 console.log(bcryptjs.compareSync('Hola123', hash));
 
+
+
+

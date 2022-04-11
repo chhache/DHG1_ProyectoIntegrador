@@ -77,7 +77,8 @@
     margin-bottom: 20px;
         
 }
-.register::after{
+/* Signo mayor de union entre forms */
+/* .register::after{
     content: '>';
     position: absolute;
     width: 25px;
@@ -94,7 +95,7 @@
     transform: translateY(-50%);
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,.5);
     color: #7c7c7c;
-}
+} */
 .login{
     /* agregar color degradado */
     /* background-image: linear-gradient(to bottom right, #1ab6b6, #4cac6e); */

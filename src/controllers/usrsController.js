@@ -36,7 +36,7 @@ const usersController = {
 		//res.send('CREATE');
         res.render("usersCreate");
     },
-	// Método POST Formulario Creación User - Sequelize 
+	// Método POST Formulario Registro de Usuario - Sequelize 
 	store: function (req,res){
 
 		const resultValidation = validationResult(req);
@@ -58,8 +58,8 @@ const usersController = {
 											// Del modelo Movie, usamos el método create y recibimos .body que viaja por POST, podría armarse un objeto literal con las claves de cada campo, en este caso se llaman igual por ello podemos pasar todo el .body (name = columnas tabla origen) -> name: req.body.formularioName
 		//image1: req.file == undefined ? 'default-image.png': req.file.filename, 
 		.then(() => {			             												// Callback para redireccinar la vista
-			res.send('Insertado a la Base de Datos')
-			//return res.redirect('login');				// Error de lectura de header	
+			//res.send('Insertado a la Base de Datos')
+			res.redirect('login');				// Error de lectura de header	
 			})	
 		.catch((err) => {
 			console.log(err);

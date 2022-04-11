@@ -19,29 +19,33 @@
                     <form method="POST" action="/usrs/login">
                         <input type="text" placeholder="Correo Electrónico" class="usuario" name="email">                        
                         <input type="password" placeholder="Contraseña" class="pass" name="password">
-                        <br><br>
+                        <br>
                         <% if (locals.errors && errors.email) { %>
                             <%= errors.email.msg %>                            
                         <% } %> 
-                        <br>                          
-                        <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario        
+                         <br>                       
+                        <!-- <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario -->
+                       
+                        <p>
+                            Recordar usuario<input type="checkbox" name="remember_user">      
+                        </p>
+                        <!-- <input type="checkbox" name="remember_user">Recordar usuario         -->
                         <!-- ]<input type="password" placeholder="Confirmar contraseña" class="repass"> -->
                         <input type="submit" class="submit" value="INGRESAR">
                         <a href="#"> ¿Olvidaste la contraseña?</a>
                     </form>
             </div>
-            <div class="login">
+            <!-- <div class="login"> -->
                 <!-- <h2>Iniciar Sesión</h2> -->
                 <!-- <h3>Acceder con ...</h3> -->
-                <div class="login-items">
+                <!-- <div class="login-items">
                     <button class="fb"><i class="fab fa-facebook-f"></i>   Facebook</button>
                     <button class="tw"><i class="fab fa-twitter"></i>   Twitter</button>
                     <button class="gmail"><i class="fab fa-google"></i>   Gmail</button> 
                     <a href="/users/register">  REGISTRARSE</a>
                 </div>
-            </div>
+            </div> -->
         </div>
-    </div>
- 
+    </div> 
 </body>
 </html>
