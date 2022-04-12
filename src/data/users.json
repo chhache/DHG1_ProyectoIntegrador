@@ -88,5 +88,14 @@
   "password": "$2a$10$vQkSs7hAfXMaReCfR6QEqOVwxev9FIxV9eUx2rE0WW3jd5weiYMNK",
   "repassword": "$2a$10$HvZbu4qjlzAUcrgi8ujmBODFXEl7E6ghWJrdPETaDWzrYBWUPR3ye",
   "image": "1647548942913_user.jpg"
+ },
+ {
+  "id": 90,
+  "firstName": "Christian",
+  "lastName": "Test1",
+  "email": "ctest1@dcompras.net",
+  "password": "$2a$10$Cl9QeBEwaPLtGSwVHisSt.lwugCi/7EBKwmYuTnaJrfEewLblds1W",
+  "repassword": "$2a$10$4Sxdb3WglObHiBJqyhWvbOhv5Pinw4Y3Nt4hHtOG7AKbpMxeUNh9W",
+  "image": "1649691104148_user.png"
  }
 ]

@@ -12,7 +12,7 @@ GLOBAL
 body{
     margin: 0;
     font-family: 'Work Sans', sans-serif;
-    background-color: #fafafa;
+    background-color: #fafafaf8;
 }
 
 /*Imagenes*/
@@ -66,6 +66,10 @@ ul {
 .secondary-btn {
     background-color:#dbdbdb;
     color:#4a4a4a;
+}
+.delete-btn {
+    background-color:#d51616;
+    color:white;
 }
 
 /*Breadcrumbs*/
@@ -309,8 +313,8 @@ footer i{
     }
     .banner-psc{
         margin: auto;
-        width: 1900px;
-        height: 500px;   
+        width: auto;
+        height: auto;   
     }
     .main-footer{
         display: grid;

@@ -52,6 +52,7 @@ const usersController = {
 		.create({
 			...req.body,																// Spread operator
 			password : bcryptjs.hashSync(req.body.password, 10),
+			// repassword: bcryptjs.compare(req.body.rerepassword, this.password),
 			image: req.file == undefined ? 'image_user_default.png': req.file.filename  // If Ternario ? si es undifined -> defaul.png SiNo -> 
 		
 		})					
@@ -76,6 +77,9 @@ const usersController = {
 		// const userMostrar = users.find(el => el.id == idUser); 
         // //res.send({users: userMostrar})
 		// res.render('users/detail', {user: userMostrar});
+		.catch((err) => {
+			console.log(err);
+		})	
     },
 
 	edit: (req,res) => {
@@ -84,12 +88,19 @@ const usersController = {
 		.findByPk(req.params.id)						// Buscar usuario por el nombre que recibe por URL-> select id.product from products where id like 'id.buscado'
 			.then(userToEdit => {						// captura  la promesa
 				res.render('usersEdit', {userToEdit})	// renderiza la vista con los products y los géneros									
-			})		
+			})
+			.catch((err) => {
+				console.log(err);
+			})			
     },
 	update: (req,res) => {
         //res.send('UPDATE')
 		db.User
-		.update(req.body, {       			// Actualizamos los campos del form (viaja por PUT)
+		.update({
+			...req.body,
+			password : bcryptjs.hashSync(req.body.password, 10),			
+			image: req.file == undefined ? 'image_user_default.png': req.file.filename  // If Ternario ? si es undifined -> defaul.png SiNo -> 
+		},{       			// Actualizamos los campos del form (viaja por PUT)
             where: {                        		
                 id: req.params.id					// Condicional -> coincida el ID con el ID que viaja por URL
             }
@@ -97,8 +108,12 @@ const usersController = {
             .then( user => {
                 //res.redirect('/usersList')
 				//res.send('Actualizado')
-				res.render('userDetail', {user})
-            })	
+				return res.redirect('/')
+				// res.render('userDetail', {user})
+            })
+			.catch((err) => {
+				console.log(err);
+			})		
     },
 
 	destroy : (req, res) => {
@@ -109,8 +124,12 @@ const usersController = {
 			}		
 		})  				
 			.then(() => {
-				res.render('usersList')				// redirecciona a /products
+				// return res.redirect('/');
+				return res.redirect('/')				// redirecciona a /
 			})
+			.catch((err) => {
+				console.log(err);
+			})	
 	},
 	
 	// Proceso registro usuario -> POST
@@ -186,17 +205,26 @@ const usersController = {
 				}
 			})								// Buscamos todos los usuarios con findAll -> método de sequlize
 				.then(user =>{								// .then toma la promesa y recibe la variable users
-					//res.send(user.email)
-					if(user === null){
-						res.send('No existe el usuario')
+					//res.send(user.email)					
+
+					if(user === null || user === " "){
+						// res.send('No existe el usuario')
+						return res.render('users/login', {
+							errors: {
+								email: {
+									msg: 'Completar con correo/usuario existente'
+								}
+							}
+						});
+
 					}else{
 						if(userToLogin === user.email){
 							//res.send('Usuario logueado')
 							//res.render('userProfile.ejs', {user})	 // Renderizamos la vista usersList -> users:users (clave:valor)
 							
 							// -- Eliminar comentar para encriptar password --
-							//let isOkThePassword = bcryptjs.compareSync(req.body.password, user.password);
-							let isOkThePassword = user.password;
+							let isOkThePassword = bcryptjs.compareSync(req.body.password, user.password);
+							//let isOkThePassword = user.password;
 								if (isOkThePassword) {
 									delete userToLogin.password;
 							// -- Eliminar comentar para encriptar password --		
@@ -204,7 +232,7 @@ const usersController = {
 									req.session.userLogged = user;
 
 									if(req.body.remember_user) {
-										res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 3 }) // 1000 = 1 seg * 60 = 1min * 2 = 2 min 
+										res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 3 }) // 1000 = 1 seg * 60 = 1 min * 3 = 3 min 
 									}
 
 									//return res.redirect('/users/profile');
@@ -218,11 +246,7 @@ const usersController = {
 										}
 									}
 								});
-							}
-						
-							// }else{
-							// res.send('Login incorrecto');
-							// }
+							}						
 					}									
 				})
 				.catch(err => {

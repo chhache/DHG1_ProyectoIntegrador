@@ -7,7 +7,7 @@
             <div class="container-flex">
                 <div class="main-header__container"> 
                   <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
-                  <h2 class="main-title">Creación de productos</h2>      
+                  <!-- <h2 class="main-title">Creación de productos</h2>       -->
                 </div>
             </div>            
         </div> 
@@ -16,8 +16,12 @@
         <div class="login-container">
             <div class="register-1">                                    
                      <form action="/products/create" method="POST" enctype="multipart/form-data"> 
-                        <input type="text" placeholder="Nombre del producto" name="name"   > 
-                        <input type="text" placeholder="Descripción" name="description" >
+                        <input type="text" placeholder="Nombre del producto" name="name" id="name"   
+                        <% if (locals.errors && errors.name) { %>                               
+                            <%= errors.name.msg %>                                
+                        <% } %> 
+                        > 
+                        <input type="text" placeholder="Descripción" name="description">
                         <input type="text" placeholder="Precio" name="price" >
                         <input type="text" placeholder="Descuento" name="discount" >
                         <input type="file" placeholder="Imagen" name="image1" >
@@ -56,9 +60,7 @@
                             <option value="<%= type.id %>"><%= type.name %></option>
                             <% }); %>
                             </select>
-                    </div>
-
-                       
+                    </div>                
                        
                     <div class="register-2">
                         <label for="id_brand">Marca </label>
@@ -70,12 +72,13 @@
                     </div>
 
                 </div>
-
-                    <button type="submit" class="submit">Guardar producto</button>
+                    <button type="submit" class="submit">Crear producto</button>
         </form>
 
             </div>    
         </div>         
     </div>
+    <!-- Vinculo externo para validacion de front-end  -->
+    <script src="/js/productValidator.js"></script>
 </body>
 </html>

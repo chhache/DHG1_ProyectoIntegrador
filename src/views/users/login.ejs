@@ -17,17 +17,21 @@
             <div class="register">
                 <h2>Iniciar Sesión | Login </h2>
                     <form method="POST" action="/usrs/login">
-                        <input type="text" placeholder="Correo Electrónico" class="usuario" name="email">                        
+                        <input type="text" placeholder="Correo Electrónico" class="usuario" name="email">
+                        <br>
+                        <!-- <% if (locals.errors && errors.email) { %>
+                            <label for="" style="color: red"><strong> <%= errors.email.msg %></strong></label>                                                      
+                        <% } %>                          -->
                         <input type="password" placeholder="Contraseña" class="pass" name="password">
                         <br>
                         <% if (locals.errors && errors.email) { %>
-                            <%= errors.email.msg %>                            
+                            <label for="" style="color: red"><strong> <%= errors.email.msg %></strong></label>                                                      
                         <% } %> 
                          <br>                       
                         <!-- <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario -->
-                       
-                        <p>
-                            Recordar usuario<input type="checkbox" name="remember_user">      
+                       <br>
+                       <p>
+                            <strong>Recordar usuario</strong><input type="checkbox" style="width: 15%" name="remember_user">      
                         </p>
                         <!-- <input type="checkbox" name="remember_user">Recordar usuario         -->
                         <!-- ]<input type="password" placeholder="Confirmar contraseña" class="repass"> -->

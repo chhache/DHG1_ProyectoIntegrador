@@ -3,47 +3,45 @@
     <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %> 
+     <!-- <div class="banner-psc"> -->
+        <div class="banner-psc">    
+            <!-- <img src="images/carrusel3.jfif" alt="Banner"> -->
+            <img src="/images/1955-chuck-taylor-all-star-1594222823.jpg" alt="Banner">
+        </div> 
    
         <main class="main">
             <div class="container">  
-                <h2 class="main-title">Todos los productos EN SALE</h2>              
+                <!-- <h2 class="main-title">Ofertas </h2>               -->
                 <!-- <h2 class="main-title">Artículos </h2> -->
                     <section class="container-products">
                         <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->
                           
                         <div class="productsale">
-                            <% for (let i =0; i< products.length; i++){ %>
-                            <div class="card-product">
-                            <a href="/products/<%= products[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
-                                <article>                                     
-                                     <img src="/images/<%= products[i].image1 %>" alt="Zapatillas" >
-                                        <div class="main-article">
-                                            <i class="fas fa-truck"></i>
-                                            <p class="price">$<%= products[i].price %></p>
-                                            <p class="discount"><%= products[i].discount %></p>
-                                            <h4 class="name"> <%= products[i].name %></h4>
-                                        </div>
-                                    </article>  
-                                </a>
-                            <!-- <a href="/productCart" rel="noopener noreferrer"> -->
-                            <a href="/detail" rel="noopener noreferrer">    
-                            <i class="product__icon fas fa-cart-plus"></i>
-                            </a>
-                           </div>
+                            <% for (let i =0; i < products.length; i++){ %>
+                                <% if (products[i].price <= 12000){ %>
+                                    <div class="card-product">
+                                        <a href="/products/<%= products[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
+                                            <article>                                     
+                                                 <img src="/images/<%= products[i].image1 %>" alt="Zapatillas" >
+                                                    <div class="main-article">
+                                                        <i class="fas fa-truck"></i>
+                                                        <p class="price">$ <%= products[i].price %></p>
+                                                        <p class="discount">% <%= products[i].discount %></p>
+                                                        <h4 class="name"> <%= products[i].name %></h4>
+                                                    </div>
+                                                </article>  
+                                            </a>
+                                        <!-- <a href="/productCart" rel="noopener noreferrer"> -->
+                                        <a href="/detail" rel="noopener noreferrer">    
+                                        <i class="product__icon fas fa-cart-plus"></i>
+                                        </a>
+                                       </div>
+                                <% } %>                            
                             <% } %>                                
                         </div>                               
                     </section>
             </div>
-            <!-- Método Search -->
-            <div class="buscar-name">
-                <!-- <form action="/movies/buscar" > // Por GET, para buscar por query string-->
-                <!-- Recibe la información en el mismo sitio (sin action='') -->
-                <!-- <form action="/products/search" method="GET">  -->
-                <form action="/products/search" method="GET">     
-                    <input type="text" name="name" id="name">
-                    <button class="boton-buscar" type="submit">Buscar un Producto</button>
-                </form>                
-            </div>
+            <!-- Método Search -->            
             <!-- <ul>
                 <% for( let i = 0; i < products.length; i++ ) { %>
                 <li>

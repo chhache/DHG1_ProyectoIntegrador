@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head') %>
-<body>
-    <header>     
-        <div class="main-header">
-            <div class="container-flex">
-                <div class="main-header__container"> 
-                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>       
-                </div>                               
-            </div>            
-        </div> 
-    </header>
-    <div class="banner-psc">
-        <img src="/images/carrusel3.jfif" alt="Banner">
-    </div> 
+<body>   
+
+    <%- include('./partials/header') %>
+     
  <main>
    <section class="productDetails">    
     <div class="detail-container">
@@ -21,11 +12,11 @@
           <div class="img-product">             
             <img src="/images/<%= product.image1 %>" alt="product image">          
           </div>
-          <div class="carrousel-img" >
+          <!-- <div class="carrousel-img" >
             <div><img src="/images/<%= product.image2 %>" ></div>
             <div><img src="/images/<%= product.image3 %>" ></div>
             <div><img src="/images/<%= product.image4 %>" ></div>
-          </div>
+          </div> -->
         </div>
         <div class="right-col">
             <div class="reputation">
@@ -55,8 +46,8 @@
                  <button class="btn secondary-btn">Agregar al carrito</button>
                  <br>
                  <a href="/products/edit/<%= product.id %>" class="btn primary-btn">Editar producto</a> 
-                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
-                    <button type="submit" class="btn secondary-btn">Eliminar producto</button> 
+                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex; justify-content: space-around">
+                    <button type="submit" class="btn delete-btn">Eliminar producto</button> 
 			    </form>
              </div>
              <div class="product-description">

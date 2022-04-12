@@ -13,32 +13,34 @@
         <div class="container">
             <!-- <h2 class="main-title">Productos </h2> -->
             <section class="container-products">
-                <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->                 
-                <div class="product">
-                <% for (let i =0; i < products.length; i++){ %>
-                    <div class="card-product">
-                    <a href="/products/<%= products[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
-                        <article>                           
-                             <img src="/images/<%= products[i].image1 %>" alt="Zapatillas" >
-                                <div class="main-article">
-                                    <i class="fas fa-truck"></i>
-                                    <p class="price">$<%= products[i].price %></p>
-                                    <p class="discount"><%= products[i].discount %></p>
-                                    <h4 class="name"> <%= products[i].name %></h4>
-                                </div>
-                            </article>  
-                        </a>
-                    <a href="/productCart" rel="noopener noreferrer">
-                    <i class="product__icon fas fa-cart-plus"></i>
+                <!-- .product*4>img.producto__img+product__description>h3.product__title+span.product__price  -->               
+            <div class="product">
+                <% for (let i =0; i< products.length; i++){ %>
+                <div class="card-product">
+                <a href="/products/<%= products[i].id %>" rel="noopener noreferrer">    <!-- LINKEAR CORRECTAMENTE CON EJS.  -->
+                    <article>                                     
+                         <img src="/images/<%= products[i].image1 %>" alt="Zapatillas" >
+                            <div class="main-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="price"><strong>$ <%= products[i].price %></strong></p>
+                                <p class="discount" style="color: blue"><strong>% <%= products[i].discount %></strong>  </p>
+                                <h4 class="name"> <%= products[i].name %></h4>
+                            </div>
+                        </article>  
                     </a>
-                   </div>
-                    <% } %>   
-            </div>            
+                <!-- <a href="/productCart" rel="noopener noreferrer"> -->
+                <a href="/detail" rel="noopener noreferrer">    
+                <i class="product__icon fas fa-cart-plus"></i>
+                </a>
+               </div>
+                <% } %>                                
+            </div> 
+
         </section>
        
         <section class="container__testimonial">
-            <h2 class="section__title">La historia detás del éxtio</h2>
-            <h3 class="testimonial__tittle">All Star de Converse</h3>
+            <h3 class="section__title">La historia detás del éxtio</h3>
+            <h4 class="testimonial__tittle">All Star de Converse</h4>
             <p class="testimonial__txt">"Sus más de 100 años de historia nos sirven para afirmar que estas deportivas de lona con suela de goma son inmortales." </p>
         </section>
             <section class="container-tips">
@@ -46,21 +48,21 @@
             <div class="tip">
                 <i class="far fa-credit-card"></i>
                 <!-- <i class="far fa-hand-paper"></i> -->
-                <h2 class="tip__tittle">Elegí cómo pagar</h2>
+                <h3 class="tip__tittle">Elegí cómo pagar</h3>
                 <p class="tip__txt">Podés pagar con tarjeta, débito o hasta 12 cuotas con dCompras Cash !! </p>
                 <a href="" class="btn-shop">COMPRAR</a>
             </div>
             <div class="tip">
                 <i class="fas fa-shipping-fast"></i>
                 <!-- <i class="fas fa-rocket"></i> -->
-                <h2 class="tip__tittle">Envíos Gratis desde $8.900</h2>
+                <h3 class="tip__tittle">Envíos Gratis desde $14.900</h3>
                 <p class="tip__txt">Solo por estar registrado en dCompras, tenés envíos gratis en un centenar de productos.</p>
                 <a href="" class="btn-shop">COMPRAR</a>
             </div>
             <div class="tip">
                 <i class="fas fa-shield-alt"></i>
                 <!-- <i class="fas fa-cog"></i> -->
-                <h2 class="tip__tittle">Seguridad</h2>
+                <h3 class="tip__tittle">Seguridad</h3>
                 <p class="tip__txt">Envíos garantizados, sino te gusta ... Devolvelo !!.</p>
                 <a href="" class="btn-shop">COMPRAR</a>
             </div>
@@ -71,7 +73,7 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
-    
+
     <%- include('./partials/footer') %>
     </body>
 </html>

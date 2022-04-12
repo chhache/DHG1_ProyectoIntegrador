@@ -12,28 +12,33 @@
         </div> 
     </header>
     <div class="banner-psc">
-        <img src="/images/carrusel3.jfif" alt="Banner">
+        <img src="/images/1955-chuck-taylor-all-star-1594222823.jpg" alt="Banner">
     </div> 
  <main>
-    <h1>USUARIO: <%= user.email %> </h1>    
-    <br>
-    <p>NOMBRE: <%= user.first_name %> </p>
-    <p>APELLIDO: <%= user.last_name %> </p>
-    <p>MAIL: <%= user.email %> </p>
-    <br>
+     <div>
+        <h3><strong>USUARIO: <%= user.email %></strong></h3>    
+        <br>
+        <p><strong>NOMBRE  :</strong>     <%= user.first_name %> </p>
+        <p><strong>APELLIDO:</strong>     <%= user.last_name %> </p>
+        <p><strong>MAIL    :</strong>     <%= user.email %> </p>
+        <br>
+     </div>
+
     <section>
         <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
         <!-- Ir a index.ejs y copiar botones y estilo para -> ADD -->
-        <a class="botonAgregar" href="/usrs/create">Agregar Usuario</a>
+        <!-- <a class="botonAgregar" href="/usrs/create">Agregar Usuario</a>
         <a class="botonVolver" href="/usrs">Listado de Usuarios</a>
         <a class="botonModificar" href="/usrs/edit/<%= user.id %>">Modificar Usuario</a>
-        <a class="botonEliminar" href="/usrs/delete//<%= user.id %>">Eliminar Usuario</a> 
-        
+        <a class="botonEliminar" href="/usrs/delete//<%= user.id %>">Eliminar Usuario</a>  -->        
         <div class="actions">
-            <a href="/usrs/edit/<%= user.id %>" class="btn primary-btn">Modificar</a> 
+            <!-- <a href="/usrs/create" class="btn primary-btn">Agregar</a>  -->
+            <a href="/usrs" class="btn primary-btn">  Listar  </a>            
+            <a href="/usrs/edit/<%= user.id %>" class="btn secondary-btn">Modificar</a> 
             <form action="/usrs/<%= user.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
-               <button type="submit" class="btn secondary-btn">Eliminar</button> 
+               <button type="submit" class="btn delete-btn">Eliminar</button> 
            </form>
+           <br><br>
         </div>
     </section>           
     </main>

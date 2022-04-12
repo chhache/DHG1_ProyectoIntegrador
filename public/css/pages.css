@@ -11,7 +11,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
 
 }
 .card-product {
@@ -42,7 +42,7 @@
     background-color: Green;
     padding: 5px;
     position: absolute;
-    top: 10px; 
+    top: -10px; 
     right: 20px;
     width: 50px;
     transform: rotate(-90deg);   
@@ -52,7 +52,7 @@
    width: 100%;
    display: flex;
    flex-wrap: wrap;
-   justify-content: flex-start;
+   justify-content: space-around;
 }
 .product a{
     text-decoration: none;
@@ -72,17 +72,17 @@
 }
 .container__testimonial{
     text-align: center;    
-    background-color: #e4e2e2;
-    padding: 10px;
-    margin: 10px 0;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin: 5px 0;
 }
 .testimonial__txt{
     color: #333;
 }
 .container-tips{
-    margin: 20px 10px;
+    margin: 10px 10px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 .btn-shop{
     display: block;

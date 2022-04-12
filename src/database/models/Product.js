@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: true
         },
         description: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(250),
             allowNull: true
         },
         price: {
